@@ -2,250 +2,198 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Curriculum Vitae académique de Yuan Tian.">
+<title>CV | Yuan TIAN</title>
 
-  <meta name="description" content="Curriculum Vitae académique de Yuan TIAN, doctorante en Sciences du langage à l'Université Savoie Mont Blanc.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <title>CV | Yuan TIAN</title>
+<link rel="stylesheet" href="css/style.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    .cv-intro {
-      max-width: 800px;
-    }
-
-    .cv-profile {
-      display: grid;
-      grid-template-columns: 1.3fr .7fr;
-      gap: 35px;
-      align-items: center;
-    }
-
-    .cv-profile-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-    }
-
-    .cv-profile-card h2 {
-      font-family: Georgia, serif;
-      font-size: 2rem;
-      font-weight: 400;
-      color: var(--green-dark);
-      margin-bottom: 12px;
-    }
-
-    .cv-profile-card p {
-      color: var(--muted);
-    }
-
-    .cv-institution {
-      background: var(--green-light);
-      border-radius: 20px;
-      padding: 28px;
-      text-align: center;
-    }
-
-    .cv-institution .symbol {
-      font-family: Georgia, serif;
-      font-size: 3.5rem;
-      color: var(--green-dark);
-    }
-
-    .cv-institution h3 {
-      font-family: Georgia, serif;
-      color: var(--green-dark);
-      margin-bottom: 8px;
-    }
-
-    .cv-section {
-      margin-top: 65px;
-    }
-
-    .cv-section-title {
-      font-family: Georgia, serif;
-      font-weight: 400;
-      font-size: 2rem;
-      color: var(--green-dark);
-      margin-bottom: 25px;
-    }
-
-    .cv-timeline {
-      border-left: 2px solid var(--green-light);
-      margin-left: 10px;
-      padding-left: 30px;
-    }
-
-    .cv-item {
-      position: relative;
-      padding: 0 0 35px;
-    }
-
-    .cv-item:last-child {
-      padding-bottom: 0;
-    }
-
-    .cv-item::before {
-      content: "";
-      position: absolute;
-      left: -38px;
-      top: 8px;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: var(--green);
-      border: 3px solid var(--cream);
-    }
-
-    .cv-date {
-      color: var(--green);
-      font-size: .9rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .cv-item h3 {
-      font-family: Georgia, serif;
-      font-size: 1.4rem;
-      margin-bottom: 6px;
-    }
-
-    .cv-item p {
-      color: var(--muted);
-      margin-top: 6px;
-    }
-
-    .cv-research-box {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 30px;
-    }
-
-    .cv-research-box h3 {
-      font-family: Georgia, serif;
-      font-size: 1.4rem;
-      color: var(--green-dark);
-      margin-bottom: 15px;
-    }
-
-    .cv-thesis {
-      background: var(--green-light);
-      padding: 25px;
-      border-radius: 15px;
-      margin-top: 18px;
-      line-height: 1.9;
-    }
-
-    .cv-skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .cv-skill-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 25px;
-    }
-
-    .cv-skill-card h3 {
-      font-family: Georgia, serif;
-      color: var(--green-dark);
-      margin-bottom: 10px;
-    }
-
-    .cv-skill-card p {
-      color: var(--muted);
-    }
-
-    .cv-contact {
-      background: var(--green-light);
-      padding: 35px;
-      border-radius: 22px;
-      text-align: center;
-    }
-
-    .cv-contact a {
-      color: var(--green-dark);
-      font-weight: 600;
-      overflow-wrap: anywhere;
-    }
-
-    .cv-note {
-      font-size: .82rem;
-      color: var(--muted);
-      margin-top: 18px;
-    }
-
-    @media(max-width: 900px) {
-      .cv-profile {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media(max-width: 650px) {
-      .cv-skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cv-profile-card,
-      .cv-skill-card {
-        padding: 23px;
-      }
-
-      .cv-section {
-        margin-top: 48px;
-      }
-    }
-
-    @media print {
-      .navbar, .footer, .cv-contact,
-      .breadcrumb {
-        display: none !important;
-      }
-
-      body {
-        background: white;
-      }
-
-      .page-header {
-        padding: 35px 0;
-      }
-
-      .section {
-        padding: 25px 0;
-      }
-
-      .cv-profile-card,
-      .cv-skill-card,
-      .cv-research-box {
-        box-shadow: none;
-        break-inside: avoid;
-      }
-
-      .cv-section {
-        margin-top: 30px;
-      }
-    }
-  </style>
+<style>
+.cv-hero {
+  padding:150px 0 75px;
+  background:linear-gradient(135deg,#e8eee5,#f7f4e9);
+}
+.cv-layout {
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:35px;
+  align-items:start;
+}
+.cv-sidebar,.cv-main {
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+.cv-card {
+  background:white;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:30px;
+  box-shadow:var(--shadow);
+}
+.cv-name {
+  font-family:Georgia,serif;
+  font-size:42px;
+  font-weight:400;
+  color:var(--green-dark);
+  line-height:1.2;
+}
+.cv-position {
+  color:var(--green);
+  margin-top:12px;
+}
+.cv-section-title {
+  font-family:Georgia,serif;
+  font-size:27px;
+  font-weight:400;
+  color:var(--green-dark);
+  margin-bottom:20px;
+}
+.cv-label {
+  font-size:11px;
+  letter-spacing:2px;
+  color:var(--green);
+  margin-bottom:10px;
+}
+.cv-entry {
+  border-left:2px solid var(--green-light);
+  padding-left:22px;
+  margin-bottom:28px;
+  position:relative;
+}
+.cv-entry:before {
+  content:"";
+  position:absolute;
+  left:-7px;
+  top:7px;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:var(--green);
+}
+.cv-date {
+  color:var(--green);
+  font-size:13px;
+  font-weight:600;
+}
+.cv-entry h3 {
+  font-family:Georgia,serif;
+  font-size:20px;
+  margin:7px 0;
+}
+.cv-entry p,.cv-card p {
+  color:var(--muted);
+  font-size:14px;
+}
+.cv-thesis {
+  background:var(--green-light);
+  border-radius:15px;
+  padding:25px;
+  margin-top:15px;
+  color:var(--green-dark);
+}
+.cv-thesis h3 {
+  font-family:Georgia,serif;
+  font-size:21px;
+  margin-bottom:12px;
+}
+.cv-thesis p {
+  color:var(--text);
+  font-size:14px;
+}
+.cv-info {
+  margin-top:15px;
+  padding-top:15px;
+  border-top:1px solid var(--border);
+}
+.cv-info strong {
+  display:block;
+  color:var(--green-dark);
+  font-size:13px;
+}
+.cv-info span {
+  color:var(--muted);
+  font-size:13px;
+}
+.cv-skills {
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:12px;
+}
+.cv-skills span {
+  background:var(--green-light);
+  color:var(--green-dark);
+  padding:6px 13px;
+  border-radius:30px;
+  font-size:12px;
+}
+.cv-actions {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+.cv-note {
+  font-size:12px!important;
+  margin-top:15px;
+}
+@media(max-width:750px) {
+  .cv-layout {
+    grid-template-columns:1fr;
+  }
+  .cv-hero {
+    padding:125px 0 55px;
+  }
+  .cv-name {
+    font-size:35px;
+  }
+}
+@media print {
+  @page { size:A4; margin:15mm; }
+  body {
+    background:white!important;
+    font-size:11px;
+  }
+  .navbar,.footer,.cv-actions {
+    display:none!important;
+  }
+  .cv-hero {
+    padding:15px 0 25px;
+    background:white!important;
+  }
+  .section {
+    padding:20px 0;
+  }
+  .cv-layout {
+    grid-template-columns:1fr 2fr;
+    gap:15px;
+  }
+  .cv-card {
+    box-shadow:none;
+    border:1px solid #ddd;
+    padding:18px;
+    break-inside:avoid;
+  }
+  .cv-entry {
+    break-inside:avoid;
+  }
+  .cv-thesis {
+    background:#edf3eb!important;
+    print-color-adjust:exact;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
 <nav class="navbar">
   <div class="container nav-inner">
-
     <a href="index.html" class="logo">Yuan TIAN.</a>
 
     <button class="menu-toggle"
@@ -259,319 +207,233 @@
       <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
     </ul>
 
-    <div class="language-switch" aria-label="Language">
+    <div class="language-switch">
       <button data-lang="FR">FR</button>
       <button data-lang="CN">中</button>
       <button data-lang="EN">EN</button>
     </div>
-
   </div>
 </nav>
 
-<!-- HEADER -->
-<header class="page-header">
+<header class="cv-hero">
   <div class="container">
-
-    <div class="breadcrumb">
-      <a href="index.html">Home</a> / CV
+    <p class="hero-label" data-i18n="cv_label">CURRICULUM VITAE</p>
+    <h1 class="cv-name">Yuan TIAN</h1>
+    <p class="cv-position" data-i18n="cv_position">
+      Doctorante en Sciences du langage
+    </p>
+    <div class="cv-actions">
+      <button class="btn" onclick="window.print()" data-i18n="cv_print">
+        Télécharger en PDF ↓
+      </button>
+      <a href="contact.html" class="btn btn-outline" data-i18n="contact_button">
+        Me contacter →
+      </a>
     </div>
-
-    <p class="hero-label" data-i18n="cv_label">
-      CURRICULUM VITAE
-    </p>
-
-    <h1 data-i18n="cv_title">
-      Academic Profile
-    </h1>
-
-    <p class="section-subtitle" style="margin-top:20px"
-      data-i18n="cv_subtitle">
-      Academic background, doctoral research and professional profile.
-    </p>
-
   </div>
 </header>
 
-<main>
+<main class="section">
+<div class="container cv-layout">
 
-<!-- PROFILE -->
-<section class="section">
-  <div class="container">
+<!-- SIDEBAR -->
+<aside class="cv-sidebar">
 
-    <div class="cv-profile">
+  <div class="cv-card">
+    <p class="cv-label" data-i18n="cv_profile_label">PROFIL</p>
+    <h2 class="cv-section-title" data-i18n="cv_profile_title">
+      Profil académique
+    </h2>
+    <p data-i18n="cv_profile_text">
+      Doctorante en Sciences du langage à l’Université Savoie Mont Blanc.
+    </p>
 
-      <div class="cv-profile-card reveal">
-
-        <p class="hero-label" data-i18n="cv_profile_label">
-          ACADEMIC PROFILE
-        </p>
-
-        <h2>Yuan TIAN</h2>
-
-        <h3 data-i18n="cv_position">
-          Doctoral Researcher in Language Sciences
-        </h3>
-
-        <p data-i18n="cv_profile_text">
-          Doctoral researcher at Université Savoie Mont Blanc,
-          working in the field of Language Sciences.
-          This website presents my academic background
-          and doctoral research.
-        </p>
-
-        <p style="margin-top:18px">
-          <a href="mailto:yuan-tian@foxmail.com">
-            yuan-tian@foxmail.com
-          </a>
-        </p>
-
-      </div>
-
-      <div class="cv-institution reveal">
-
-        <div class="symbol">Y.</div>
-
-        <h3>Université Savoie Mont Blanc</h3>
-
-        <p data-i18n="cv_discipline">
-          Language Sciences
-        </p>
-
-      </div>
-
+    <div class="cv-info">
+      <strong data-i18n="cv_field_label">Discipline</strong>
+      <span data-i18n="cv_field">Sciences du langage</span>
     </div>
 
-    <!-- EDUCATION -->
-    <div class="cv-section">
-
-      <p class="hero-label" data-i18n="cv_education_label">
-        EDUCATION
-      </p>
-
-      <h2 class="cv-section-title" data-i18n="cv_education_title">
-        Academic Background
-      </h2>
-
-      <div class="cv-timeline">
-
-        <div class="cv-item reveal">
-
-          <div class="cv-date">2019 – Present</div>
-
-          <h3 data-i18n="cv_phd">
-            Doctorate in Language Sciences
-          </h3>
-
-          <p><strong>Université Savoie Mont Blanc</strong></p>
-
-          <p data-i18n="cv_phd_detail">
-            Doctoral thesis under joint supervision.
-          </p>
-
-        </div>
-
-        <div class="cv-item reveal">
-
-          <div class="cv-date">2016 – 2018</div>
-
-          <h3>Master Français Langue Étrangère (FLE)</h3>
-
-          <p><strong>Université Savoie Mont Blanc</strong></p>
-
-          <p data-i18n="cv_master_detail">
-            Master's degree in French as a Foreign Language.
-          </p>
-
-        </div>
-
-      </div>
-
+    <div class="cv-info">
+      <strong data-i18n="cv_email_label">Email</strong>
+      <span><a href="mailto:yuan-tian@foxmail.com">yuan-tian@foxmail.com</a></span>
     </div>
-
-    <!-- DOCTORAL RESEARCH -->
-    <div class="cv-section" id="research">
-
-      <p class="hero-label" data-i18n="cv_research_label">
-        DOCTORAL RESEARCH
-      </p>
-
-      <h2 class="cv-section-title" data-i18n="cv_research_title">
-        Research Topic
-      </h2>
-
-      <div class="cv-research-box reveal">
-
-        <h3 data-i18n="cv_thesis_heading">
-          Doctoral Thesis
-        </h3>
-
-        <p data-i18n="cv_codirection">
-          Doctoral thesis under joint supervision
-          in Language Sciences.
-        </p>
-
-        <div class="cv-thesis">
-
-          <p>
-            <strong>
-              Méthode d’intégration des TICE dans
-              l’enseignement/apprentissage du FLE au lycée /
-              collège en Chine pour que les apprenants
-              améliorent leur compétence en production
-              du français oral.
-            </strong>
-          </p>
-
-        </div>
-
-        <p class="cv-note" data-i18n="cv_thesis_note">
-          Original doctoral research title provided by the researcher.
-        </p>
-
-      </div>
-
-    </div>
-
-    <!-- RESEARCH CONTEXT -->
-    <div class="cv-section">
-
-      <p class="hero-label" data-i18n="cv_context_label">
-        RESEARCH CONTEXT
-      </p>
-
-      <h2 class="cv-section-title" data-i18n="cv_context_title">
-        Research Environment
-      </h2>
-
-      <div class="cv-skills-grid">
-
-        <div class="cv-skill-card reveal">
-          <h3 data-i18n="cv_school">
-            University
-          </h3>
-          <p>Université Savoie Mont Blanc</p>
-        </div>
-
-        <div class="cv-skill-card reveal">
-          <h3 data-i18n="cv_doctoral_school">
-            Doctoral School
-          </h3>
-          <p>ED CST</p>
-        </div>
-
-        <div class="cv-skill-card reveal">
-          <h3 data-i18n="cv_lab">
-            Research Laboratory
-          </h3>
-          <p>LLSETI · Axe 2</p>
-        </div>
-
-        <div class="cv-skill-card reveal">
-          <h3 data-i18n="cv_field">
-            Academic Discipline
-          </h3>
-          <p data-i18n="cv_discipline">
-            Language Sciences
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- LANGUAGES -->
-    <div class="cv-section">
-
-      <p class="hero-label" data-i18n="cv_languages_label">
-        LANGUAGES
-      </p>
-
-      <h2 class="cv-section-title" data-i18n="cv_languages_title">
-        Language Skills
-      </h2>
-
-      <div class="cv-research-box reveal">
-
-        <p data-i18n="cv_languages_text">
-          French · Chinese · English
-        </p>
-
-        <p class="cv-note" data-i18n="cv_language_note">
-          Language proficiency levels have not been specified.
-        </p>
-
-      </div>
-
-    </div>
-
-    <!-- CONTACT -->
-    <div class="cv-section">
-
-      <div class="cv-contact reveal">
-
-        <p class="hero-label" data-i18n="cv_contact_label">
-          ACADEMIC CONTACT
-        </p>
-
-        <h2 class="cv-section-title"
-          data-i18n="cv_contact_title">
-          Academic Exchange & Collaboration
-        </h2>
-
-        <p>
-          <a href="mailto:yuan-tian@foxmail.com">
-            yuan-tian@foxmail.com
-          </a>
-        </p>
-
-      </div>
-
-    </div>
-
   </div>
-</section>
 
+  <div class="cv-card">
+    <p class="cv-label" data-i18n="cv_languages_label">LANGUES</p>
+    <h2 class="cv-section-title" data-i18n="cv_languages_title">
+      Compétences linguistiques
+    </h2>
+    <div class="cv-skills">
+      <span data-i18n="cv_french">Français</span>
+      <span data-i18n="cv_chinese">Chinois</span>
+      <span data-i18n="cv_english">Anglais</span>
+    </div>
+    <p class="cv-note" data-i18n="cv_language_note">
+      Les niveaux de maîtrise restent à préciser.
+    </p>
+  </div>
+
+  <div class="cv-card">
+    <p class="cv-label" data-i18n="cv_environment_label">
+      ENVIRONNEMENT ACADÉMIQUE
+    </p>
+    <h2 class="cv-section-title" data-i18n="cv_environment_title">
+      Institutions
+    </h2>
+
+    <div class="cv-info">
+      <strong data-i18n="cv_university">Université</strong>
+      <span>Université Savoie Mont Blanc</span>
+    </div>
+
+    <div class="cv-info">
+      <strong data-i18n="cv_school">École doctorale</strong>
+      <span>ED CST</span>
+    </div>
+
+    <div class="cv-info">
+      <strong data-i18n="cv_lab">Laboratoire</strong>
+      <span>LLSETI · Axe 2</span>
+    </div>
+  </div>
+
+</aside>
+
+<!-- MAIN CV -->
+<div class="cv-main">
+
+  <section class="cv-card">
+    <p class="cv-label" data-i18n="cv_education_label">FORMATION</p>
+    <h2 class="cv-section-title" data-i18n="cv_education_title">
+      Parcours universitaire
+    </h2>
+
+    <div class="cv-entry">
+      <span class="cv-date">2019 – Présent</span>
+      <h3 data-i18n="cv_phd">Doctorat en Sciences du langage</h3>
+      <p>Université Savoie Mont Blanc</p>
+      <p data-i18n="cv_phd_detail">
+        Doctorat en Français Langue Étrangère.
+      </p>
+    </div>
+
+    <div class="cv-entry">
+      <span class="cv-date">2016 – 2018</span>
+      <h3 data-i18n="cv_master">Master en Français Langue Étrangère</h3>
+      <p>Université Savoie Mont Blanc</p>
+      <p data-i18n="cv_master_detail">
+        Master en Français Langue Étrangère (FLE).
+      </p>
+    </div>
+  </section>
+
+  <section class="cv-card">
+    <p class="cv-label" data-i18n="cv_research_label">
+      RECHERCHE DOCTORALE
+    </p>
+    <h2 class="cv-section-title" data-i18n="cv_research_title">
+      Sujet de recherche
+    </h2>
+
+    <p data-i18n="cv_codirection">
+      Thèse de doctorat en codirection en Sciences du langage.
+    </p>
+
+    <div class="cv-thesis">
+      <h3 data-i18n="cv_thesis_heading">Titre de la thèse</h3>
+      <p>
+        Méthode d’intégration des TICE dans l’enseignement/apprentissage
+        du FLE au lycée / collège en Chine pour que les apprenants
+        améliorent leur compétence en production du français oral.
+      </p>
+    </div>
+  </section>
+
+  <section class="cv-card">
+    <p class="cv-label" data-i18n="cv_focus_label">
+      AXES DE RECHERCHE
+    </p>
+    <h2 class="cv-section-title" data-i18n="cv_focus_title">
+      Domaines de recherche
+    </h2>
+
+    <div class="cv-skills">
+      <span data-i18n="cv_focus_1">Français Langue Étrangère</span>
+      <span data-i18n="cv_focus_2">TICE</span>
+      <span data-i18n="cv_focus_3">Enseignement / Apprentissage</span>
+      <span data-i18n="cv_focus_4">Production orale</span>
+      <span data-i18n="cv_focus_5">Contexte éducatif chinois</span>
+    </div>
+  </section>
+
+  <section class="cv-card">
+    <p class="cv-label" data-i18n="cv_collaboration_label">
+      CONTACT ACADÉMIQUE
+    </p>
+    <h2 class="cv-section-title" data-i18n="cv_collaboration_title">
+      Échanges et collaborations
+    </h2>
+    <p data-i18n="cv_collaboration_text">
+      Ouverte aux échanges scientifiques et aux collaborations académiques.
+    </p>
+    <p style="margin-top:15px">
+      <a href="mailto:yuan-tian@foxmail.com">
+        yuan-tian@foxmail.com
+      </a>
+    </p>
+  </section>
+
+</div>
+</div>
 </main>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-
     <div class="footer-grid">
-
       <div>
         <h2 class="logo" style="color:white">Yuan TIAN.</h2>
-        <p style="margin-top:15px;color:#d3dfd1"
-          data-i18n="footer_description">
-          Academic Portfolio · Language Sciences
+        <p data-i18n="footer_description">
+          Portfolio académique · Sciences du langage
         </p>
       </div>
-
       <div>
         <h3 data-i18n="footer_navigation">Navigation</h3>
-        <p><a href="index.html" data-i18n="nav_home">Home</a></p>
-        <p><a href="academic.html" data-i18n="nav_academic">Research</a></p>
-        <p><a href="cv.html" data-i18n="nav_cv">CV</a></p>
-        <p><a href="contact.html" data-i18n="nav_contact">Contact</a></p>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="academic.html">Research</a></p>
+        <p><a href="contact.html">Contact</a></p>
       </div>
-
-      <div>
-        <h3 data-i18n="nav_contact">Contact</h3>
-        <p>yuan-tian@foxmail.com</p>
-      </div>
-
     </div>
-
     <div class="footer-bottom">
       © <span class="current-year"></span> Yuan TIAN.
       <span data-i18n="footer_rights">All rights reserved.</span>
     </div>
-
   </div>
 </footer>
 
 <script src="js/translations.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+const menu = document.querySelector(".menu-toggle");
+const links = document.querySelector(".nav-links");
+
+if(menu && links) {
+  menu.addEventListener("click", () => {
+    const opened = links.classList.toggle("open");
+    menu.setAttribute("aria-expanded", opened);
+    menu.textContent = opened ? "✕" : "☰";
+  });
+
+  links.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      links.classList.remove("open");
+      menu.setAttribute("aria-expanded", "false");
+      menu.textContent = "☰";
+    });
+  });
+}
+</script>
 
 </body>
 </html>
