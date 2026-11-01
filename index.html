@@ -658,24 +658,47 @@ contactBtn:"Contact me ↗"
 }
 };
 
-let lang="fr";
-const order=["fr","zh","en"];
 
-function setLanguage(next){
-  lang=next;
-  document.documentElement.lang=next==="zh"?"zh-CN":next;
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const key=el.dataset.i18n;
-    if(translations[next][key]) el.textContent=translations[next][key];
+const order = ["fr", "zh", "en"];
+
+// Read the previously selected language
+let lang = localStorage.getItem("preferredLanguage") || "fr";
+
+function setLanguage(next) {
+  if (!translations[next]) return;
+
+  lang = next;
+
+  // Save language for all pages
+  localStorage.setItem("preferredLanguage", next);
+
+  document.documentElement.lang =
+    next === "zh" ? "zh-CN" : next;
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+
+    if (translations[next][key]) {
+      el.textContent = translations[next][key];
+    }
   });
-  document.getElementById("languageBtn").textContent=
-    next==="fr"?"FR / 中文 / EN":
-    next==="zh"?"中文 / FR / EN":"EN / FR / 中文";
+
+  document.getElementById("languageBtn").textContent =
+    next === "fr" ? "FR / 中文 / EN" :
+    next === "zh" ? "中文 / FR / EN" :
+    "EN / FR / 中文";
 }
 
-document.getElementById("languageBtn").addEventListener("click",()=>{
-  setLanguage(order[(order.indexOf(lang)+1)%3]);
+// Language switching
+document.getElementById("languageBtn").addEventListener("click", () => {
+  const currentIndex = order.indexOf(lang);
+  const nextIndex = (currentIndex + 1) % order.length;
+
+  setLanguage(order[nextIndex]);
 });
+
+// Apply saved language on page load
+setLanguage(lang);
 
 const toggle=document.getElementById("menuToggle");
 const nav=document.getElementById("navLinks");
