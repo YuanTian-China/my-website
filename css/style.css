@@ -680,3 +680,30 @@ button, input, textarea, select {
     transform: none;
   }
 }
+
+/* Clickable academic cards */
+
+a.research-card {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.research-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(53, 75, 55, .12);
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--green-dark);
+  font-size: .9rem;
+  font-weight: 600;
+  transition: all .3s ease;
+}
+
+a.research-card:hover .card-link {
+  transform: translateX(5px);
+}
