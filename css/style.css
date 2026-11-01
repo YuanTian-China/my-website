@@ -571,6 +571,7 @@ button, input, textarea, select {
   transition: opacity .7s ease, transform .7s ease;
 }
 
+.reveal.active,
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
