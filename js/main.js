@@ -1,20 +1,14 @@
 
 /* =========================================
    YUAN TIAN - MAIN JAVASCRIPT
-   Multilingual Website: FR / CN / EN
+   FR / CN / EN
 ========================================= */
 
 (function () {
   "use strict";
 
-  /* =========================================
-     1. LANGUAGE CONFIGURATION
-  ========================================= */
-
   const STORAGE_KEY = "yuan_tian_language";
-
   const DEFAULT_LANG = "FR";
-
   const SUPPORTED_LANGS = ["FR", "CN", "EN"];
 
   const LANG_CODES = {
@@ -24,7 +18,7 @@
   };
 
   /* =========================================
-     2. GET TRANSLATION DICTIONARY
+     1. GET TRANSLATIONS
   ========================================= */
 
   function getTranslations() {
@@ -32,7 +26,7 @@
   }
 
   /* =========================================
-     3. GET SAVED LANGUAGE
+     2. GET SAVED LANGUAGE
   ========================================= */
 
   function getLanguage() {
@@ -43,40 +37,30 @@
         return saved;
       }
     } catch (error) {
-      console.warn("Cannot access localStorage:", error);
+      console.warn("Language storage unavailable:", error);
     }
 
     return DEFAULT_LANG;
   }
 
   /* =========================================
-     4. TRANSLATE PAGE CONTENT
+     3. TRANSLATE PAGE
   ========================================= */
 
   function translatePage(lang) {
 
     const translations = getTranslations();
 
-    if (!translations[lang]) {
-      console.error(
-        "Translation dictionary missing for:",
-        lang
-      );
-      return;
-    }
-
-    const translations = getTranslations();
-
-    // Update HTML language attribute
     document.documentElement.lang = LANG_CODES[lang];
 
     // Translate normal text
     document.querySelectorAll("[data-i18n]").forEach(element => {
 
-      const key = element.getAttribute("data-i18n");
+      const key = element.dataset.i18n;
+      const value = translations[key]?.[lang];
 
-      if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
-        element.textContent = translations[key]?.[lang];
+      if (value !== undefined) {
+        element.textContent = value;
       }
 
     });
@@ -84,68 +68,63 @@
     // Translate placeholders
     document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
 
-      const key = element.getAttribute("data-i18n-placeholder");
+      const key = element.dataset.i18nPlaceholder;
+      const value = translations[key]?.[lang];
 
-      if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
-        element.placeholder = translations[key]?.[lang];
+      if (value !== undefined) {
+        element.placeholder = value;
       }
 
     });
 
-    // Translate document title if a key is provided
+    // Translate document title
     const titleElement = document.querySelector("[data-i18n-title]");
 
     if (titleElement) {
-      const key = titleElement.getAttribute("data-i18n-title");
+      const key = titleElement.dataset.i18nTitle;
+      const value = translations[key]?.[lang];
 
-      if (translations[key]?.[lang]) {
-        document.title = translations[key]?.[lang];
+      if (value !== undefined) {
+        document.title = value;
       }
     }
 
-    // Update language buttons
+    // Update active language button
     document.querySelectorAll("[data-lang]").forEach(button => {
 
       const active = button.dataset.lang === lang;
 
       button.classList.toggle("active", active);
-
-      button.setAttribute(
-        "aria-pressed",
-        String(active)
-      );
+      button.setAttribute("aria-pressed", String(active));
 
     });
 
-    // Save current language
+    // Save language
     try {
       localStorage.setItem(STORAGE_KEY, lang);
     } catch (error) {
-      console.warn("Cannot save language preference:", error);
+      console.warn("Cannot save language:", error);
     }
 
   }
 
   /* =========================================
-     5. CHANGE LANGUAGE
+     4. SET LANGUAGE
   ========================================= */
 
   function setLanguage(lang) {
 
     if (!SUPPORTED_LANGS.includes(lang)) {
-      console.warn("Unsupported language:", lang);
       return;
     }
 
     translatePage(lang);
-
   }
 
-  // Make language function globally accessible
   window.setLanguage = setLanguage;
 
   /* =========================================
-     6. LANGUAGE BUTTON EVENTS
+     5. LANGUAGE BUTTONS
   ========================================= */
 
   function initLanguageButtons() {
@@ -153,11 +132,7 @@
     document.querySelectorAll("[data-lang]").forEach(button => {
 
       button.addEventListener("click", function () {
-
-        const lang = this.dataset.lang;
-
-        setLanguage(lang);
-
+        setLanguage(this.dataset.lang);
       });
 
     });
@@ -165,13 +140,12 @@
   }
 
   /* =========================================
-     7. MOBILE NAVIGATION
+     6. MOBILE MENU
   ========================================= */
 
   function initMobileMenu() {
 
     const menu = document.querySelector(".menu-toggle");
-
     const links = document.querySelector(".nav-links");
 
     if (!menu || !links) return;
@@ -180,11 +154,7 @@
 
       const opened = links.classList.toggle("open");
 
-      menu.setAttribute(
-        "aria-expanded",
-        String(opened)
-      );
-
+      menu.setAttribute("aria-expanded", String(opened));
       menu.textContent = opened ? "✕" : "☰";
 
     });
@@ -194,9 +164,7 @@
       link.addEventListener("click", function () {
 
         links.classList.remove("open");
-
         menu.setAttribute("aria-expanded", "false");
-
         menu.textContent = "☰";
 
       });
@@ -206,7 +174,7 @@
   }
 
   /* =========================================
-     8. SCROLL REVEAL ANIMATION
+     7. SCROLL REVEAL
   ========================================= */
 
   function initRevealAnimation() {
@@ -216,88 +184,68 @@
     if (!elements.length) return;
 
     if (!("IntersectionObserver" in window)) {
-
       elements.forEach(element => {
         element.classList.add("active");
       });
-
       return;
     }
 
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
+    const observer = new IntersectionObserver((entries, observer) => {
 
-        entries.forEach(entry => {
+      entries.forEach(entry => {
 
-          if (entry.isIntersecting) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
 
-            entry.target.classList.add("active");
+      });
 
-            observer.unobserve(entry.target);
-
-          }
-
-        });
-
-      },
-      {
-        threshold: 0.12
-      }
-    );
-
-    elements.forEach(element => {
-      observer.observe(element);
+    }, {
+      threshold: 0.12
     });
+
+    elements.forEach(element => observer.observe(element));
 
   }
 
   /* =========================================
-     9. CURRENT YEAR
+     8. CURRENT YEAR
   ========================================= */
 
   function updateCurrentYear() {
 
-    const year = new Date().getFullYear();
-
     document.querySelectorAll(".current-year").forEach(element => {
-
-      element.textContent = year;
-
+      element.textContent = new Date().getFullYear();
     });
 
   }
 
   /* =========================================
-     10. RESEARCH FILTERS
+     9. RESEARCH FILTERS
   ========================================= */
 
   function initResearchFilters() {
 
-    const filterButtons = document.querySelectorAll(".filter-btn");
-
+    const buttons = document.querySelectorAll(".filter-btn");
     const cards = document.querySelectorAll(".research-card");
 
-    if (!filterButtons.length || !cards.length) return;
+    if (!buttons.length || !cards.length) return;
 
-    filterButtons.forEach(button => {
+    buttons.forEach(button => {
 
       button.addEventListener("click", function () {
 
         const filter = this.dataset.filter;
 
-        filterButtons.forEach(item => {
-          item.classList.remove("active");
-        });
-
+        buttons.forEach(item => item.classList.remove("active"));
         this.classList.add("active");
 
         cards.forEach(card => {
 
-          const category = card.dataset.category;
-
           card.hidden = (
             filter !== "all" &&
-            category !== filter
+            card.dataset.category !== filter
           );
 
         });
@@ -309,14 +257,12 @@
   }
 
   /* =========================================
-     11. FAQ ACCORDION
+     10. FAQ
   ========================================= */
 
   function initFAQ() {
 
-    const questions = document.querySelectorAll(".faq-question");
-
-    questions.forEach(question => {
+    document.querySelectorAll(".faq-question").forEach(question => {
 
       question.addEventListener("click", function () {
 
@@ -326,20 +272,15 @@
           return;
         }
 
-        const isExpanded =
-          this.getAttribute("aria-expanded") === "true";
+        const expanded = this.getAttribute("aria-expanded") === "true";
 
-        this.setAttribute(
-          "aria-expanded",
-          String(!isExpanded)
-        );
-
-        answer.hidden = isExpanded;
+        this.setAttribute("aria-expanded", String(!expanded));
+        answer.hidden = expanded;
 
         const icon = this.querySelector("span");
 
         if (icon) {
-          icon.textContent = isExpanded ? "＋" : "－";
+          icon.textContent = expanded ? "＋" : "－";
         }
 
       });
@@ -349,41 +290,33 @@
   }
 
   /* =========================================
-     12. INITIALIZE WEBSITE
+     11. INITIALIZE WEBSITE
   ========================================= */
 
   function initWebsite() {
 
+    // Initialize language buttons FIRST
+    initLanguageButtons();
+
     // Restore saved language
     setLanguage(getLanguage());
 
-    // Initialize navigation
+    // Other functions
     initMobileMenu();
-
-    // Initialize animations
     initRevealAnimation();
-
-    // Initialize footer year
     updateCurrentYear();
-
-    // Initialize research filters
     initResearchFilters();
-
-    // Initialize FAQ
     initFAQ();
 
   }
 
   /* =========================================
-     13. START
+     12. START
   ========================================= */
 
   if (document.readyState === "loading") {
 
-    document.addEventListener(
-      "DOMContentLoaded",
-      initWebsite
-    );
+    document.addEventListener("DOMContentLoaded", initWebsite);
 
   } else {
 
