@@ -707,3 +707,53 @@ a.research-card:hover {
 a.research-card:hover .card-link {
   transform: translateX(5px);
 }
+/* =================================
+   CONTACT PAGE LAYOUT FIX
+================================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: start;
+    width: 100%;
+}
+
+.contact-info-card {
+    display: block;
+    width: 100%;
+    background: white;
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+.contact-form {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+}
