@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic research portfolio of Yuan Tian.">
+  <title>Academic Research | Yuan Tian</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .research-card[hidden] {
+      display: none;
+    }
+
+    .research-card {
+      display: block;
+    }
+
+    .research-meta {
+      color: var(--muted);
+      font-size: .85rem;
+      margin-top: 15px;
+    }
+
+    .academic-intro {
+      max-width: 760px;
+      margin-bottom: 45px;
+    }
+
+    .research-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .academic-note {
+      margin-top: 15px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    .research-card h3 {
+      font-family: Georgia, serif;
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <div class="container nav-inner">
+
+    <a href="index.html" class="logo">Yuan Tian.</a>
+
+    <button class="menu-toggle"
+      aria-label="Open navigation"
+      aria-expanded="false">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+      <li><a href="academic.html" class="active" data-i18n="nav_academic">Recherche</a></li>
+      <li><a href="cv.html" data-i18n="nav_cv">CV</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+
+    <div class="language-switch" aria-label="Language">
+      <button data-lang="FR">FR</button>
+      <button data-lang="CN">中</button>
+      <button data-lang="EN">EN</button>
+    </div>
+
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="container">
+
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> / Academic Research
+    </div>
+
+    <p class="hero-label">RESEARCH & ACADEMIC WORK</p>
+
+    <h1 data-i18n="academic_title">
+      Academic Research
+    </h1>
+
+    <p class="section-subtitle" style="margin-top:20px"
+      data-i18n="academic_subtitle">
+      Exploring ideas, building knowledge and connecting disciplines.
+    </p>
+
+  </div>
+</header>
+
+<main>
+
+<!-- RESEARCH INTRODUCTION -->
+<section class="section">
+  <div class="container">
+
+    <div class="academic-intro reveal">
+
+      <p class="hero-label" data-i18n="research_overview">
+        RESEARCH OVERVIEW
+      </p>
+
+      <h2 class="section-title"
+        data-i18n="research_heading">
+        Research Interests
+      </h2>
+
+      <p class="section-subtitle"
+        data-i18n="research_description">
+        This section introduces my academic interests,
+        research questions and interdisciplinary perspectives.
+        The content below is illustrative and will be
+        replaced with my actual research profile.
+      </p>
+
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card reveal">
+        <div class="card-icon">📚</div>
+        <h3 data-i18n="interest_1">Research Area One</h3>
+        <p data-i18n="interest_1_desc">
+          An example research field and its central questions.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-icon">🌍</div>
+        <h3 data-i18n="interest_2">Research Area Two</h3>
+        <p data-i18n="interest_2_desc">
+          An example of international and comparative research.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-icon">🔎</div>
+        <h3 data-i18n="interest_3">Research Area Three</h3>
+        <p data-i18n="interest_3_desc">
+          An example of interdisciplinary investigation.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- RESEARCH PROJECTS -->
+<section class="section" style="background:#f1f3ed">
+  <div class="container">
+
+    <p class="hero-label">SELECTED WORK</p>
+
+    <h2 class="section-title"
+      data-i18n="projects_title">
+      Research Projects
+    </h2>
+
+    <p class="section-subtitle"
+      data-i18n="projects_subtitle">
+      A selection of research themes and academic projects.
+    </p>
+
+    <!-- FILTERS -->
+    <div class="filter-list">
+      <button class="filter-btn active"
+        data-filter="all" data-i18n="filter_all">All</button>
+
+      <button class="filter-btn"
+        data-filter="project" data-i18n="filter_project">Projects</button>
+
+      <button class="filter-btn"
+        data-filter="publication" data-i18n="filter_publication">Publications</button>
+
+      <button class="filter-btn"
+        data-filter="conference" data-i18n="filter_conference">Conferences</button>
+    </div>
+
+    <!-- RESEARCH CARDS -->
+    <div class="research-grid">
+
+      <article class="research-card reveal" data-category="project">
+
+        <img class="research-image"
+          src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=900"
+          alt="Academic research notebook">
+
+        <div class="research-content">
+
+          <span class="research-tag">DEMO PROJECT</span>
+
+          <h3 data-i18n="project_1">
+            Interdisciplinary Research Project
+          </h3>
+
+          <p data-i18n="project_1_desc">
+            An illustrative example of a research project,
+            including its objectives, methodology and findings.
+          </p>
+
+          <p class="research-meta">2025 – 2026 · Example content</p>
+
+        </div>
+      </article>
+
+      <article class="research-card reveal" data-category="publication">
+
+        <img class="research-image"
+          src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=900"
+          alt="Academic library">
+
+        <div class="research-content">
+
+          <span class="research-tag">DEMO PUBLICATION</span>
+
+          <h3 data-i18n="project_2">
+            Academic Literature Review
+          </h3>
+
+          <p data-i18n="project_2_desc">
+            An example of a literature review exploring
+            theoretical frameworks and research perspectives.
+          </p>
+
+          <p class="research-meta">Example · Not a real publication</p>
+
+        </div>
+      </article>
+
+      <article class="research-card reveal" data-category="conference">
+
+        <img class="research-image"
+          src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=900"
+          alt="Academic conference">
+
+        <div class="research-content">
+
+          <span class="research-tag">DEMO CONFERENCE</span>
+
+          <h3 data-i18n="project_3">
+            International Academic Conference
+          </h3>
+
+          <p data-i18n="project_3_desc">
+            An illustrative example of conference participation
+            and academic knowledge exchange.
+          </p>
+
+          <p class="research-meta">Example · Not a real event</p>
+
+        </div>
+      </article>
+
+      <article class="research-card reveal" data-category="project">
+
+        <img class="research-image"
+          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900"
+          alt="Digital research">
+
+        <div class="research-content">
+
+          <span class="research-tag">DEMO PROJECT</span>
+
+          <h3 data-i18n="project_4">
+            Digital Research Methods
+          </h3>
+
+          <p data-i18n="project_4_desc">
+            An example of digital tools and analytical
+            approaches in contemporary research.
+          </p>
+
+          <p class="research-meta">Example content</p>
+
+        </div>
+      </article>
+
+    </div>
+
+    <p class="academic-note">
+      * All projects and publications shown on this page are
+      demonstration content, not verified academic achievements.
+    </p>
+
+  </div>
+</section>
+
+<!-- RESEARCH METHODOLOGY -->
+<section class="section">
+  <div class="container">
+
+    <div class="hero-grid">
+
+      <div class="reveal">
+
+        <p class="hero-label">METHODOLOGY</p>
+
+        <h2 class="section-title"
+          data-i18n="method_title">
+          Research Methodology
+        </h2>
+
+        <p class="section-subtitle"
+          data-i18n="method_desc">
+          Research methodology is central to producing
+          rigorous, transparent and meaningful academic work.
+        </p>
+
+        <br>
+
+        <div class="card">
+          <h3 data-i18n="method_1">Literature Analysis</h3>
+          <p data-i18n="method_1_desc">
+            Reviewing existing academic literature and
+            identifying research gaps.
+          </p>
+        </div>
+
+        <br>
+
+        <div class="card">
+          <h3 data-i18n="method_2">Comparative Perspectives</h3>
+          <p data-i18n="method_2_desc">
+            Exploring different perspectives and
+            interdisciplinary approaches.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1000"
+          alt="Research writing and methodology"
+          style="width:100%;height:480px;object-fit:cover;border-radius:25px">
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ACADEMIC QUOTE -->
+<section class="section">
+  <div class="container">
+
+    <div class="quote-section reveal">
+
+      <blockquote data-i18n="academic_quote">
+        "Research is not only about finding answers,
+        but also about learning how to ask better questions."
+      </blockquote>
+
+      <p style="margin-top:20px;color:var(--muted)">
+        — Academic reflection
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="section">
+  <div class="container">
+
+    <div class="banner reveal">
+
+      <h2 class="section-title"
+        data-i18n="collaboration_title">
+        Academic Collaboration
+      </h2>
+
+      <p class="section-subtitle"
+        style="margin:0 auto 25px"
+        data-i18n="collaboration_desc">
+        Open to academic exchange, research discussions
+        and interdisciplinary collaboration.
+      </p>
+
+      <a href="contact.html" class="btn"
+        data-i18n="contact_button">
+        Get in Touch →
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h2 class="logo" style="color:white">Yuan Tian.</h2>
+        <p style="margin-top:15px;color:#d3dfd1">
+          Academic Portfolio · Doctoral Research
+        </p>
+      </div>
+
+      <div>
+        <h3>Navigation</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="academic.html">Research</a></p>
+        <p><a href="cv.html">CV</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+
+      <div>
+        <h3>Academic Profile</h3>
+        <p>Research & Publications</p>
+        <p>Academic Exchange</p>
+        <p>International Collaboration</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © <span class="current-year"></span> Yuan Tian.
+      Academic Portfolio. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
