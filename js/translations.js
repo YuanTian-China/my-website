@@ -179,4 +179,46 @@ window.translations = {
     CN: "联系我 →",
     EN: "Get in Touch →"
   }
+
+  // CONTACT PAGE
+  contact_title: {
+    FR: "Contact et collaboration",
+    CN: "联系与合作",
+    EN: "Contact & Collaboration"
+  },
+  contact_subtitle: {
+    FR: "Je suis ouverte aux échanges académiques, aux discussions scientifiques et aux collaborations internationales.",
+    CN: "欢迎学术交流、研究讨论及国际合作。",
+    EN: "I welcome academic exchange, research discussions and international collaboration."
+  },
+  contact_heading: {
+    FR: "Prenons contact",
+    CN: "与我联系",
+    EN: "Get in Touch"
+  },
+  contact_description: {
+    FR: "Pour toute question académique, collaboration scientifique ou échange professionnel, n'hésitez pas à me contacter.",
+    CN: "如有学术咨询、科研合作或专业交流需求，欢迎与我联系。",
+    EN: "For academic enquiries, research collaboration or professional exchange, feel free to reach out."
+  },
+  form_title: {
+    FR: "Envoyer un message",
+    CN: "发送消息",
+    EN: "Send a Message"
+  },
+  form_description: {
+    FR: "Veuillez utiliser le formulaire ci-dessous pour m'envoyer un message.",
+    CN: "请填写下面的表格发送消息。",
+    EN: "Please leave a message using the form below."
+  },
+  faq_title: {
+    FR: "Questions fréquentes",
+    CN: "常见问题",
+    EN: "Frequently Asked Questions"
+  },
+  location_title: {
+    FR: "Localisation académique",
+    CN: "学术所在地",
+    EN: "Academic Location"
+  }
 };
