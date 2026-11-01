@@ -97,7 +97,49 @@ h1 span {color:var(--sage);font-style:italic}
   background:white;padding:15px;border-radius:12px;
   color:var(--green);box-shadow:0 8px 25px #00000010;
 }
+.academic-info {
+  position:absolute;
+  left:0;
+  bottom:-115px;
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
 
+.academic-info-item {
+  background:white;
+  padding:13px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  box-shadow:0 5px 20px #00000008;
+}
+
+.academic-info-item span {
+  display:block;
+  font-size:10px;
+  letter-spacing:1.5px;
+  color:var(--sage);
+  margin-bottom:5px;
+}
+
+.academic-info-item strong {
+  font-family:Georgia,serif;
+  font-size:13px;
+  color:var(--dark);
+}
+
+@media(max-width:650px) {
+  .academic-info {
+    position:relative;
+    bottom:auto;
+    margin-top:20px;
+  }
+
+  .hero-visual {
+    margin-bottom:20px;
+  }
+}
 section {padding:85px 0}
 .section-label {color:var(--green);font-size:12px;letter-spacing:3px;margin-bottom:12px}
 .section-title {font-family:Georgia,serif;font-size:42px;font-weight:normal;color:var(--dark)}
@@ -366,7 +408,7 @@ footer {
     </h1>
     <p class="hero-description" data-i18n="description">
       Bienvenue sur mon espace académique personnel.
-      Je suis Yuan TIAN, doctorant en sciences du langage.
+      Je suis Yuan TIAN, doctorante en Sciences du langage.
     </p>
     <a href="#about" class="btn btn-primary" data-i18n="discover">Découvrir mon parcours</a>
     <a href="academic.html" class="btn btn-outline" data-i18n="more">Espace académique ↗</a>
@@ -377,6 +419,27 @@ footer {
       <div class="visual-caption">LANGUAGE · RESEARCH · KNOWLEDGE</div>
     </div>
     <div class="floating-note">Penser autrement.</div>
+        <div class="academic-info reveal">
+      <div class="academic-info-item">
+        <span>UNIVERSITÉ</span>
+        <strong>Université Savoie Mont Blanc</strong>
+      </div>
+
+      <div class="academic-info-item">
+        <span>ÉCOLE DOCTORALE</span>
+        <strong>ED CST</strong>
+      </div>
+
+      <div class="academic-info-item">
+        <span>LABORATOIRE</span>
+        <strong>LLSETI · Axe 2</strong>
+      </div>
+
+      <div class="academic-info-item">
+        <span>DISCIPLINE</span>
+        <strong>Sciences du langage</strong>
+      </div>
+    </div>
   </div>
 </div>
 </section>
@@ -403,7 +466,7 @@ footer {
         Un parcours entre les langues et les savoirs.
       </h2>
       <p class="about-text" data-i18n="aboutText">
-        Je suis Yuan TIAN, doctorant en sciences du langage.
+        Je suis Yuan TIAN, Doctorante en Sciences du langage.
         Ce site est un espace personnel dédié à mon parcours
         académique et à mes recherches.
       </p>
@@ -504,14 +567,14 @@ fr:{
 home:"Accueil",about:"À propos",research:"Recherche",
 academic:"Académie",contact:"Contact",
 line1:"Penser le",line2:"langage,",line3:"explorer le monde.",
-description:"Bienvenue sur mon espace académique personnel. Je suis Yuan TIAN, doctorant en sciences du langage.",
+description:"Bienvenue sur mon espace académique personnel. Je suis Yuan TIAN, Doctorante en Sciences du langage.",
 discover:"Découvrir mon parcours",more:"Espace académique ↗",
 profile:"Quelques repères",identity:"Identité académique",
 doctoral:"Parcours doctoral",languages:"Français · 中文 · English",
 discipline:"Sciences du langage",
 aboutLabel:"À PROPOS",
 aboutTitle:"Un parcours entre les langues et les savoirs.",
-aboutText:"Je suis Yuan TIAN, doctorant en sciences du langage. Ce site est un espace personnel dédié à mon parcours académique et à mes recherches.",
+aboutText:"Je suis Yuan TIAN, Doctorante en Sciences du langage. Ce site est un espace personnel dédié à mon parcours académique et à mes recherches.",
 aboutText2:"À travers le français, le chinois et l'anglais, je souhaite favoriser le dialogue et les échanges académiques.",
 researchLabel:"RECHERCHE",researchTitle:"Mon univers académique",
 researchSubtitle:"Un espace pour présenter mes recherches.",
