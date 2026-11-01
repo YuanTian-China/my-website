@@ -1,17 +1,35 @@
 
 window.translations = {
+
+  // =========================
+  // NAVIGATION
+  // =========================
+
   nav_home: {
-    FR: "Accueil", CN: "首页", EN: "Home"
+    FR: "Accueil",
+    CN: "首页",
+    EN: "Home"
   },
   nav_academic: {
-    FR: "Recherche", CN: "学术研究", EN: "Research"
+    FR: "Recherche",
+    CN: "学术研究",
+    EN: "Research"
   },
   nav_cv: {
-    FR: "CV", CN: "个人简历", EN: "CV"
+    FR: "CV",
+    CN: "个人简历",
+    EN: "CV"
   },
   nav_contact: {
-    FR: "Contact", CN: "联系我", EN: "Contact"
+    FR: "Contact",
+    CN: "联系我",
+    EN: "Contact"
   },
+
+  // =========================
+  // ACADEMIC PAGE
+  // =========================
+
   academic_title: {
     FR: "Recherche académique",
     CN: "学术研究",
@@ -67,6 +85,7 @@ window.translations = {
     CN: "跨学科研究示例。",
     EN: "An example of interdisciplinary investigation."
   },
+
   projects_title: {
     FR: "Projets de recherche",
     CN: "研究项目",
@@ -78,17 +97,26 @@ window.translations = {
     EN: "A selection of research themes and academic projects."
   },
   filter_all: {
-    FR: "Tout", CN: "全部", EN: "All"
+    FR: "Tout",
+    CN: "全部",
+    EN: "All"
   },
   filter_project: {
-    FR: "Projets", CN: "项目", EN: "Projects"
+    FR: "Projets",
+    CN: "项目",
+    EN: "Projects"
   },
   filter_publication: {
-    FR: "Publications", CN: "论文", EN: "Publications"
+    FR: "Publications",
+    CN: "论文",
+    EN: "Publications"
   },
   filter_conference: {
-    FR: "Conférences", CN: "会议", EN: "Conferences"
+    FR: "Conférences",
+    CN: "会议",
+    EN: "Conferences"
   },
+
   project_1: {
     FR: "Projet de recherche interdisciplinaire",
     CN: "跨学科研究项目",
@@ -129,6 +157,7 @@ window.translations = {
     CN: "当代研究中数字工具与分析方法的示例。",
     EN: "An example of digital tools and analytical approaches."
   },
+
   method_title: {
     FR: "Méthodologie de recherche",
     CN: "研究方法",
@@ -174,13 +203,16 @@ window.translations = {
     CN: "欢迎学术交流、研究讨论与跨学科合作。",
     EN: "Open to academic exchange and interdisciplinary collaboration."
   },
-    contact_button: {
+  contact_button: {
     FR: "Me contacter →",
     CN: "联系我 →",
     EN: "Get in Touch →"
   },
 
+  // =========================
   // CONTACT PAGE
+  // =========================
+
   contact_title: {
     FR: "Contact et collaboration",
     CN: "联系与合作",
@@ -221,7 +253,26 @@ window.translations = {
     CN: "学术所在地",
     EN: "Academic Location"
   },
+  contact_affiliation: {
+    FR: "🎓 Affiliation académique",
+    CN: "🎓 学术所属机构",
+    EN: "🎓 Academic Affiliation"
+  },
+  contact_institution: {
+    FR: "Université Savoie Mont Blanc",
+    CN: "萨瓦勃朗峰大学",
+    EN: "Université Savoie Mont Blanc"
+  },
+  contact_country: {
+    FR: "France",
+    CN: "法国",
+    EN: "France"
+  },
+
+  // =========================
   // CV PAGE
+  // =========================
+
   cv_label: {
     FR: "CURRICULUM VITAE",
     CN: "个人学术简历",
@@ -282,13 +333,22 @@ window.translations = {
     CN: "对外法语专业硕士。",
     EN: "Master's degree in French as a Foreign Language."
   },
+  cv_master: {
+    FR: "Master en Français Langue Étrangère",
+    CN: "对外法语硕士",
+    EN: "Master's Degree in French as a Foreign Language"
+  },
   cv_research_label: {
     FR: "RECHERCHE DOCTORALE",
     CN: "博士研究",
     EN: "DOCTORAL RESEARCH"
   },
   cv_research_title: {
-      cv_thesis_title: {
+    FR: "Recherche doctorale en Sciences du langage",
+    CN: "语言科学博士研究",
+    EN: "Doctoral Research in Language Sciences"
+  },
+  cv_thesis_title: {
     FR: "Méthode d’intégration des TICE dans l’enseignement/apprentissage du FLE au lycée / collège en Chine pour que les apprenants améliorent leur compétence en production du français oral.",
     CN: "中国中学法语教学中信息与通信技术（TICE）的整合方法：促进学习者法语口语表达能力的提升。",
     EN: "Methods for Integrating ICT into FLE Teaching and Learning in Chinese Middle and High Schools to Improve Learners’ French Oral Production Skills."
@@ -304,11 +364,31 @@ window.translations = {
     EN: "Doctoral thesis under joint supervision in Language Sciences."
   },
   cv_thesis_note: {
-  FR: "Cette recherche porte sur l’intégration des TICE dans l’enseignement du FLE en Chine, avec pour objectif de développer les compétences en production orale des apprenants.",
-  CN: "本研究探讨信息与通信技术（TICE）在中国对外法语教学中的整合应用，旨在提升学习者的法语口语表达能力。",
-  EN: "This research explores the integration of ICT into French as a Foreign Language (FLE) teaching in China, with the aim of improving learners’ oral production skills."
-},
-   cv_context_label: {
+    FR: "Cette recherche porte sur l’intégration des TICE dans l’enseignement du FLE en Chine, avec pour objectif de développer les compétences en production orale des apprenants.",
+    CN: "本研究探讨信息与通信技术（TICE）在中国对外法语教学中的整合应用，旨在提升学习者的法语口语表达能力。",
+    EN: "This research explores the integration of ICT into French as a Foreign Language (FLE) teaching in China, with the aim of improving learners’ oral production skills."
+  },
+  cv_print: {
+    FR: "Télécharger en PDF ↓",
+    CN: "下载 PDF ↓",
+    EN: "Download PDF ↓"
+  },
+  cv_profile_title: {
+    FR: "Profil académique",
+    CN: "学术个人简介",
+    EN: "Academic Profile"
+  },
+  cv_field_label: {
+    FR: "Discipline",
+    CN: "专业领域",
+    EN: "Discipline"
+  },
+  cv_email_label: {
+    FR: "Adresse e-mail",
+    CN: "电子邮箱",
+    EN: "Email Address"
+  },
+  cv_context_label: {
     FR: "ENVIRONNEMENT ACADÉMIQUE",
     CN: "学术背景",
     EN: "ACADEMIC BACKGROUND"
@@ -338,6 +418,7 @@ window.translations = {
     CN: "语言科学",
     EN: "Language Sciences"
   },
+
   cv_languages_label: {
     FR: "LANGUES",
     CN: "语言",
@@ -358,6 +439,71 @@ window.translations = {
     CN: "语言熟练程度及具体等级暂不标注。",
     EN: "Specific language proficiency levels are not listed at this stage."
   },
+  cv_french: {
+    FR: "Français",
+    CN: "法语",
+    EN: "French"
+  },
+  cv_chinese: {
+    FR: "Chinois",
+    CN: "中文",
+    EN: "Chinese"
+  },
+  cv_english: {
+    FR: "Anglais",
+    CN: "英语",
+    EN: "English"
+  },
+  cv_environment_label: {
+    FR: "ENVIRONNEMENT ACADÉMIQUE",
+    CN: "学术研究环境",
+    EN: "ACADEMIC ENVIRONMENT"
+  },
+  cv_environment_title: {
+    FR: "Institutions académiques",
+    CN: "学术机构",
+    EN: "Academic Institutions"
+  },
+  cv_university: {
+    FR: "Université",
+    CN: "大学",
+    EN: "University"
+  },
+  cv_focus_label: {
+    FR: "DOMAINES DE RECHERCHE",
+    CN: "研究方向",
+    EN: "RESEARCH AREAS"
+  },
+  cv_focus_title: {
+    FR: "Axes de recherche",
+    CN: "主要研究领域",
+    EN: "Research Areas"
+  },
+  cv_focus_1: {
+    FR: "Français Langue Étrangère",
+    CN: "对外法语教学",
+    EN: "French as a Foreign Language"
+  },
+  cv_focus_2: {
+    FR: "TICE",
+    CN: "信息与通信技术在教育中的应用",
+    EN: "ICT in Education"
+  },
+  cv_focus_3: {
+    FR: "Enseignement / Apprentissage",
+    CN: "教学与学习",
+    EN: "Teaching and Learning"
+  },
+  cv_focus_4: {
+    FR: "Production orale",
+    CN: "法语口语表达",
+    EN: "Oral Production"
+  },
+  cv_focus_5: {
+    FR: "Contexte éducatif chinois",
+    CN: "中国教育环境",
+    EN: "Chinese Educational Context"
+  },
   cv_contact_label: {
     FR: "CONTACT ACADÉMIQUE",
     CN: "学术联系",
@@ -368,6 +514,26 @@ window.translations = {
     CN: "学术交流与合作",
     EN: "Academic Exchange & Collaboration"
   },
+  cv_collaboration_label: {
+    FR: "CONTACT ACADÉMIQUE",
+    CN: "学术联系",
+    EN: "ACADEMIC CONTACT"
+  },
+  cv_collaboration_title: {
+    FR: "Échanges et collaborations",
+    CN: "学术交流与合作",
+    EN: "Academic Exchange and Collaboration"
+  },
+  cv_collaboration_text: {
+    FR: "Ouverte aux échanges scientifiques et aux collaborations académiques.",
+    CN: "欢迎学术交流、研究讨论及学术合作。",
+    EN: "Open to academic exchange, research discussions and academic collaboration."
+  },
+
+  // =========================
+  // FOOTER
+  // =========================
+
   footer_description: {
     FR: "Portfolio académique · Sciences du langage",
     CN: "个人学术网站 · 语言科学",
@@ -384,159 +550,4 @@ window.translations = {
     EN: "All rights reserved."
   }
 
-  // ADDITIONAL CV TRANSLATIONS
-
-  cv_print: {
-    FR: "Télécharger en PDF ↓",
-    CN: "下载 PDF ↓",
-    EN: "Download PDF ↓"
-  },
-
-  cv_profile_title: {
-    FR: "Profil académique",
-    CN: "学术个人简介",
-    EN: "Academic Profile"
-  },
-
-  cv_field_label: {
-    FR: "Discipline",
-    CN: "专业领域",
-    EN: "Discipline"
-  },
-
-  cv_email_label: {
-    FR: "Adresse e-mail",
-    CN: "电子邮箱",
-    EN: "Email Address"
-  },
-
-  cv_french: {
-    FR: "Français",
-    CN: "法语",
-    EN: "French"
-  },
-
-  cv_chinese: {
-    FR: "Chinois",
-    CN: "中文",
-    EN: "Chinese"
-  },
-
-  cv_english: {
-    FR: "Anglais",
-    CN: "英语",
-    EN: "English"
-  },
-
-  cv_environment_label: {
-    FR: "ENVIRONNEMENT ACADÉMIQUE",
-    CN: "学术研究环境",
-    EN: "ACADEMIC ENVIRONMENT"
-  },
-
-  cv_environment_title: {
-    FR: "Institutions académiques",
-    CN: "学术机构",
-    EN: "Academic Institutions"
-  },
-
-  cv_university: {
-    FR: "Université",
-    CN: "大学",
-    EN: "University"
-  },
-
-  cv_school: {
-    FR: "École doctorale",
-    CN: "博士研究生院",
-    EN: "Doctoral School"
-  },
-
-  cv_lab: {
-    FR: "Laboratoire de recherche",
-    CN: "研究实验室",
-    EN: "Research Laboratory"
-  },
-
-  cv_master: {
-    FR: "Master en Français Langue Étrangère",
-    CN: "对外法语硕士",
-    EN: "Master's Degree in French as a Foreign Language"
-  },
-
-  cv_focus_label: {
-    FR: "DOMAINES DE RECHERCHE",
-    CN: "研究方向",
-    EN: "RESEARCH AREAS"
-  },
-
-  cv_focus_title: {
-    FR: "Axes de recherche",
-    CN: "主要研究领域",
-    EN: "Research Areas"
-  },
-
-  cv_focus_1: {
-    FR: "Français Langue Étrangère",
-    CN: "对外法语教学",
-    EN: "French as a Foreign Language"
-  },
-
-  cv_focus_2: {
-    FR: "TICE",
-    CN: "信息与通信技术在教育中的应用",
-    EN: "ICT in Education"
-  },
-
-  cv_focus_3: {
-    FR: "Enseignement / Apprentissage",
-    CN: "教学与学习",
-    EN: "Teaching and Learning"
-  },
-
-  cv_focus_4: {
-    FR: "Production orale",
-    CN: "法语口语表达",
-    EN: "Oral Production"
-  },
-
-  cv_focus_5: {
-    FR: "Contexte éducatif chinois",
-    CN: "中国教育环境",
-    EN: "Chinese Educational Context"
-  },
-
-  cv_collaboration_label: {
-    FR: "CONTACT ACADÉMIQUE",
-    CN: "学术联系",
-    EN: "ACADEMIC CONTACT"
-  },
-
-  cv_collaboration_title: {
-    FR: "Échanges et collaborations",
-    CN: "学术交流与合作",
-    EN: "Academic Exchange and Collaboration"
-  },
-
-  cv_collaboration_text: {
-    FR: "Ouverte aux échanges scientifiques et aux collaborations académiques.",
-    CN: "欢迎学术交流、研究讨论及学术合作。",
-    EN: "Open to academic exchange, research discussions and academic collaboration."
-  }
-contact_affiliation: {
-  FR: "🎓 Affiliation académique",
-  CN: "🎓 学术所属机构",
-  EN: "🎓 Academic Affiliation"
-},
-
-contact_institution: {
-  FR: "Université Savoie Mont Blanc",
-  CN: "萨瓦勃朗峰大学",
-  EN: "Université Savoie Mont Blanc"
-},
-
-contact_country: {
-  FR: "France",
-  CN: "法国",
-  EN: "France"
-}};
+};
