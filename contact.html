@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Contact Yuan Tian for academic exchange and research collaboration.">
+
+  <title>Contact | Yuan Tian</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .contact-info-card {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 25px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+
+    .contact-info-card h3 {
+      font-family: Georgia, serif;
+      margin-bottom: 8px;
+    }
+
+    .contact-info-card p {
+      color: var(--muted);
+    }
+
+    .contact-info-card a {
+      color: var(--green-dark);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-form .btn {
+      margin-top: 10px;
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+      padding: 18px 20px;
+      border: none;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .faq-answer {
+      padding: 0 20px 20px;
+      color: var(--muted);
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .contact-avatar {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: var(--shadow);
+    }
+
+    .avatar-wall {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .contact-map {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 25px;
+    }
+
+    .form-status {
+      color: var(--green-dark);
+      margin-top: 15px;
+      font-size: .9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <div class="container nav-inner">
+
+    <a href="index.html" class="logo">Yuan Tian.</a>
+
+    <button class="menu-toggle"
+      aria-label="Open navigation"
+      aria-expanded="false">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+      <li><a href="academic.html" data-i18n="nav_academic">Recherche</a></li>
+      <li><a href="cv.html" data-i18n="nav_cv">CV</a></li>
+      <li><a href="contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+
+    <div class="language-switch" aria-label="Language">
+      <button data-lang="FR">FR</button>
+      <button data-lang="CN">中</button>
+      <button data-lang="EN">EN</button>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="page-header">
+  <div class="container">
+
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> / Contact
+    </div>
+
+    <p class="hero-label">GET IN TOUCH</p>
+
+    <h1 data-i18n="contact_title">
+      Contact & Collaboration
+    </h1>
+
+    <p class="section-subtitle" style="margin-top:20px"
+      data-i18n="contact_subtitle">
+      I welcome academic exchange, research discussions
+      and international collaboration.
+    </p>
+
+  </div>
+</header>
+
+<main>
+
+<!-- CONTACT INFORMATION + FORM -->
+<section class="section">
+  <div class="container">
+
+    <div class="contact-grid">
+
+      <!-- LEFT -->
+      <div class="reveal">
+
+        <p class="hero-label">LET'S CONNECT</p>
+
+        <h2 class="section-title"
+          data-i18n="contact_heading">
+          Get in Touch
+        </h2>
+
+        <p class="section-subtitle"
+          data-i18n="contact_description">
+          For academic enquiries, research collaboration
+          or professional exchange, feel free to reach out.
+        </p>
+
+        <br>
+
+        <div class="contact-info-card">
+          <h3>✉ Email</h3>
+          <p>
+            <a href="mailto:your.email@example.com">
+              your.email@example.com
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>🎓 Academic Affiliation</h3>
+          <p>University / Research Institution</p>
+          <p>France · Example information</p>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>🌍 Languages</h3>
+          <p>中文 · Français · English</p>
+        </div>
+
+        <h3 style="margin-top:30px">Academic Community</h3>
+
+        <div class="avatar-wall">
+          <img class="contact-avatar"
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200"
+            alt="Illustrative portrait">
+
+          <img class="contact-avatar"
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200"
+            alt="Illustrative portrait">
+
+          <img class="contact-avatar"
+            src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200"
+            alt="Illustrative portrait">
+        </div>
+
+        <p class="academic-note">
+          Illustrative portraits only. Not actual team members.
+        </p>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="contact-form reveal">
+
+        <h2 class="section-title"
+          style="font-size:2rem"
+          data-i18n="form_title">
+          Send a Message
+        </h2>
+
+        <p class="section-subtitle"
+          style="margin-bottom:25px"
+          data-i18n="form_description">
+          Please leave a message using the form below.
+        </p>
+
+        <form id="contactForm">
+
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label for="firstName">First Name / Prénom</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Your first name"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name / Nom</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Your last name"
+                required>
+            </div>
+
+            <div class="form-group full">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                required>
+            </div>
+
+            <div class="form-group full">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option>Academic Collaboration</option>
+                <option>Research Discussion</option>
+                <option>Conference Invitation</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Write your message here..."
+                required></textarea>
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn">
+            Send Message →
+          </button>
+
+          <p class="form-status" id="formStatus" role="status">
+            Demo form: no message is sent yet.
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:#f1f3ed">
+  <div class="container">
+
+    <p class="hero-label">FAQ</p>
+
+    <h2 class="section-title"
+      data-i18n="faq_title">
+      Frequently Asked Questions
+    </h2>
+
+    <div class="faq-grid" style="margin-top:35px">
+
+      <div class="faq-item">
+        <button class="faq-question"
+          aria-expanded="false">
+          How can I contact you?
+          <span>＋</span>
+        </button>
+        <div class="faq-answer" hidden>
+          You can contact me through the email address
+          displayed on this page.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question"
+          aria-expanded="false">
+          Are you open to academic collaboration?
+          <span>＋</span>
+        </button>
+        <div class="faq-answer" hidden>
+          Yes. I welcome research discussions,
+          academic exchange and interdisciplinary collaboration.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question"
+          aria-expanded="false">
+          Can I discuss research ideas with you?
+          <span>＋</span>
+        </button>
+        <div class="faq-answer" hidden>
+          Academic discussions and exchanges
+          are always welcome.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question"
+          aria-expanded="false">
+          Which languages can I use?
+          <span>＋</span>
+        </button>
+        <div class="faq-answer" hidden>
+          Chinese, French and English.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="section">
+  <div class="container">
+
+    <p class="hero-label">LOCATION</p>
+
+    <h2 class="section-title"
+      data-i18n="location_title">
+      Academic Location
+    </h2>
+
+    <p class="section-subtitle">
+      University and research location will be
+      added here after personalisation.
+    </p>
+
+    <br>
+
+    <div class="banner">
+      <div style="font-size:2rem">📍</div>
+      <h3>France</h3>
+      <p>University / Research Institution · To be completed</p>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h2 class="logo" style="color:white">Yuan Tian.</h2>
+        <p style="margin-top:15px;color:#d3dfd1">
+          Academic Portfolio · Doctoral Research
+        </p>
+      </div>
+
+      <div>
+        <h3>Navigation</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="academic.html">Research</a></p>
+        <p><a href="cv.html">CV</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>Academic Exchange</p>
+        <p>Research Collaboration</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © <span class="current-year"></span> Yuan Tian.
+      Academic Portfolio. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+  // The form is a demonstration only.
+  // It does not transmit or store messages.
+  document.getElementById("contactForm")
+    .addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      document.getElementById("formStatus").textContent =
+        "Thank you! This demo form is not connected to an email service yet.";
+    });
+</script>
+
+</body>
+</html>
