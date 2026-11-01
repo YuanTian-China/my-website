@@ -548,7 +548,7 @@ window.translations = {
     FR: "Tous droits réservés.",
     CN: "版权所有。",
     EN: "All rights reserved."
-  }
+  },
 
   // =========================
   // ACADEMIC RESOURCES
