@@ -221,7 +221,6 @@ window.translations = {
     CN: "学术所在地",
     EN: "Academic Location"
   },
-
   // CV PAGE
   cv_label: {
     FR: "CURRICULUM VITAE",
@@ -383,5 +382,145 @@ window.translations = {
     FR: "Tous droits réservés.",
     CN: "版权所有。",
     EN: "All rights reserved."
+  }
+
+  // ADDITIONAL CV TRANSLATIONS
+
+  cv_print: {
+    FR: "Télécharger en PDF ↓",
+    CN: "下载 PDF ↓",
+    EN: "Download PDF ↓"
+  },
+
+  cv_profile_title: {
+    FR: "Profil académique",
+    CN: "学术个人简介",
+    EN: "Academic Profile"
+  },
+
+  cv_field_label: {
+    FR: "Discipline",
+    CN: "专业领域",
+    EN: "Discipline"
+  },
+
+  cv_email_label: {
+    FR: "Adresse e-mail",
+    CN: "电子邮箱",
+    EN: "Email Address"
+  },
+
+  cv_french: {
+    FR: "Français",
+    CN: "法语",
+    EN: "French"
+  },
+
+  cv_chinese: {
+    FR: "Chinois",
+    CN: "中文",
+    EN: "Chinese"
+  },
+
+  cv_english: {
+    FR: "Anglais",
+    CN: "英语",
+    EN: "English"
+  },
+
+  cv_environment_label: {
+    FR: "ENVIRONNEMENT ACADÉMIQUE",
+    CN: "学术研究环境",
+    EN: "ACADEMIC ENVIRONMENT"
+  },
+
+  cv_environment_title: {
+    FR: "Institutions académiques",
+    CN: "学术机构",
+    EN: "Academic Institutions"
+  },
+
+  cv_university: {
+    FR: "Université",
+    CN: "大学",
+    EN: "University"
+  },
+
+  cv_school: {
+    FR: "École doctorale",
+    CN: "博士研究生院",
+    EN: "Doctoral School"
+  },
+
+  cv_lab: {
+    FR: "Laboratoire de recherche",
+    CN: "研究实验室",
+    EN: "Research Laboratory"
+  },
+
+  cv_master: {
+    FR: "Master en Français Langue Étrangère",
+    CN: "对外法语硕士",
+    EN: "Master's Degree in French as a Foreign Language"
+  },
+
+  cv_focus_label: {
+    FR: "DOMAINES DE RECHERCHE",
+    CN: "研究方向",
+    EN: "RESEARCH AREAS"
+  },
+
+  cv_focus_title: {
+    FR: "Axes de recherche",
+    CN: "主要研究领域",
+    EN: "Research Areas"
+  },
+
+  cv_focus_1: {
+    FR: "Français Langue Étrangère",
+    CN: "对外法语教学",
+    EN: "French as a Foreign Language"
+  },
+
+  cv_focus_2: {
+    FR: "TICE",
+    CN: "信息与通信技术在教育中的应用",
+    EN: "ICT in Education"
+  },
+
+  cv_focus_3: {
+    FR: "Enseignement / Apprentissage",
+    CN: "教学与学习",
+    EN: "Teaching and Learning"
+  },
+
+  cv_focus_4: {
+    FR: "Production orale",
+    CN: "法语口语表达",
+    EN: "Oral Production"
+  },
+
+  cv_focus_5: {
+    FR: "Contexte éducatif chinois",
+    CN: "中国教育环境",
+    EN: "Chinese Educational Context"
+  },
+
+  cv_collaboration_label: {
+    FR: "CONTACT ACADÉMIQUE",
+    CN: "学术联系",
+    EN: "ACADEMIC CONTACT"
+  },
+
+  cv_collaboration_title: {
+    FR: "Échanges et collaborations",
+    CN: "学术交流与合作",
+    EN: "Academic Exchange and Collaboration"
+  },
+
+  cv_collaboration_text: {
+    FR: "Ouverte aux échanges scientifiques et aux collaborations académiques.",
+    CN: "欢迎学术交流、研究讨论及学术合作。",
+    EN: "Open to academic exchange, research discussions and academic collaboration."
   }
 };
