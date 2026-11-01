@@ -1,31 +1,623 @@
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一个网站</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: #f0f4f8;
-            padding: 80px 20px;
-        }
-        h1 { color: #2563eb; }
-        p { color: #555; font-size: 18px; }
-        button {
-            background: #2563eb;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuan TIAN | Sciences du langage</title>
+<style>
+:root {
+  --bg:#fafaf6;
+  --green:#315b46;
+  --dark:#203e30;
+  --sage:#a8b9a0;
+  --light:#edf3eb;
+  --cream:#f3eee3;
+  --text:#303832;
+  --muted:#788078;
+  --border:#e7e9e1;
+}
+* {margin:0;padding:0;box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  font-family:Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.8;
+}
+a {text-decoration:none;color:inherit}
+.container {width:90%;max-width:1120px;margin:auto}
+
+.navbar {
+  position:fixed;top:0;left:0;width:100%;
+  z-index:1000;background:rgba(250,250,246,.95);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner {
+  height:75px;display:flex;
+  align-items:center;justify-content:space-between;
+}
+.logo {font-size:25px;color:var(--green);font-weight:bold}
+.nav-links {display:flex;gap:30px}
+.nav-links a {font-size:14px;position:relative}
+.nav-links a:hover {color:var(--green)}
+.nav-links a:after {
+  content:"";position:absolute;bottom:-7px;left:0;
+  width:0;height:2px;background:var(--green);
+  transition:.3s;
+}
+.nav-links a:hover:after {width:100%}
+.language {
+  border:1px solid var(--border);border-radius:30px;
+  padding:8px 12px;background:transparent;
+  color:var(--green);cursor:pointer;
+}
+.menu-toggle {display:none;border:0;background:none;font-size:24px;color:var(--green)}
+
+.hero {padding:160px 0 100px}
+.hero-grid {
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:60px;align-items:center;
+}
+.eyebrow {color:var(--green);letter-spacing:3px;font-size:12px;margin-bottom:25px}
+h1 {
+  font-family:Georgia,serif;font-size:65px;
+  font-weight:normal;line-height:1.2;
+  color:var(--dark);margin-bottom:25px;
+}
+h1 span {color:var(--sage);font-style:italic}
+.hero-description {color:var(--muted);font-size:16px;margin-bottom:30px}
+.btn {
+  display:inline-block;padding:12px 23px;
+  border-radius:30px;margin:5px;font-size:14px;
+  transition:.3s;
+}
+.btn-primary {background:var(--green);color:white}
+.btn-primary:hover {background:var(--dark);transform:translateY(-3px)}
+.btn-outline {border:1px solid var(--border);color:var(--green)}
+.btn-outline:hover {background:var(--light)}
+
+.hero-visual {
+  min-height:400px;display:flex;
+  justify-content:center;align-items:center;
+  position:relative;
+}
+.visual-content {
+  width:290px;height:340px;
+  border-radius:48% 48% 15px 15px;
+  background:linear-gradient(145deg,#edf3eb,#b7c9b0);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  box-shadow:0 15px 40px #315b4615;
+}
+.visual-symbol {font-family:Georgia,serif;font-size:110px;color:var(--green)}
+.visual-caption {font-size:11px;color:var(--green);letter-spacing:2px}
+.floating-note {
+  position:absolute;bottom:30px;right:0;
+  background:white;padding:15px;border-radius:12px;
+  color:var(--green);box-shadow:0 8px 25px #00000010;
+}
+
+section {padding:85px 0}
+.section-label {color:var(--green);font-size:12px;letter-spacing:3px;margin-bottom:12px}
+.section-title {font-family:Georgia,serif;font-size:42px;font-weight:normal;color:var(--dark)}
+.section-subtitle {color:var(--muted);margin-top:12px}
+    
+/* PROFILE CARDS */
+.profile-card {
+  background:#fafaf6;
+  border:1px solid #e7e9e1;
+  border-radius:16px;
+  padding:28px 22px;
+  transition:all .3s ease;
+}
+.profile-card strong {
+  display:block;
+  font-family:Georgia,serif;
+  font-size:24px;
+  color:#315b46;
+  margin-bottom:8px;
+}
+.profile-card p {
+  color:#788078;
+  font-size:13px;
+}
+.profile-card:hover {
+  transform:translateY(-7px);
+  box-shadow:0 12px 35px rgba(39,65,47,.09);
+  border-color:#a8b9a0;
+}
+
+/* ABOUT */
+.about-grid {
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:70px;
+  align-items:center;
+}
+.about-decoration {
+  min-height:300px;
+  background:#edf3eb;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#315b46;
+  font-family:Georgia,serif;
+  font-size:65px;
+}
+.about-text {
+  margin-top:20px;
+  color:#788078;
+  font-size:14px;
+}
+.about-signature {
+  margin-top:25px;
+  color:#315b46;
+  font-family:Georgia,serif;
+  font-size:25px;
+}
+
+/* RESEARCH */
+.research {
+  background:#edf3eb;
+}
+.research-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-top:35px;
+}
+.research-card {
+  padding:32px 26px;
+  background:white;
+  border-radius:17px;
+  transition:.3s;
+}
+.research-card:hover {
+  transform:translateY(-8px);
+  box-shadow:0 12px 35px rgba(39,65,47,.09);
+}
+.research-icon {
+  font-size:25px;
+  color:#315b46;
+  margin-bottom:15px;
+}
+.research-card h3 {
+  font-family:Georgia,serif;
+  font-size:22px;
+  color:#203e30;
+  margin-bottom:12px;
+}
+.research-card p {
+  font-size:13px;
+  color:#788078;
+}
+
+/* QUOTE */
+.quote-box {
+  background:#f3eee3;
+  padding:50px 30px;
+  text-align:center;
+  border-radius:20px;
+}
+.quote-mark {
+  color:#a8b9a0;
+  font-family:Georgia,serif;
+  font-size:60px;
+}
+.quote-text {
+  max-width:750px;
+  margin:10px auto 20px;
+  font-family:Georgia,serif;
+  font-size:27px;
+  line-height:1.5;
+  color:#203e30;
+}
+
+/* CONTACT */
+.contact {
+  background:white;
+  text-align:center;
+}
+.contact-description {
+  max-width:550px;
+  margin:20px auto 30px;
+  color:#788078;
+}
+
+/* FOOTER */
+footer {
+  background:#20382c;
+  color:#e7eee7;
+  padding:45px 0 25px;
+}
+.footer-grid {
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  padding-bottom:30px;
+}
+.footer-name {
+  font-family:Georgia,serif;
+  font-size:28px;
+}
+.footer-description {
+  color:#bdcbbf;
+  font-size:12px;
+}
+.footer-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:22px;
+  font-size:13px;
+}
+.footer-links a:hover {
+  color:#b5d0ae;
+}
+.copyright {
+  padding-top:20px;
+  border-top:1px solid #ffffff25;
+  text-align:center;
+  font-size:11px;
+  color:#bdcbbf;
+}
+
+/* ANIMATION */
+.reveal {
+  opacity:0;
+  transform:translateY(20px);
+  transition:.7s;
+}
+.reveal.visible {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:850px) {
+  .hero-grid {
+    gap:25px;
+  }
+  #profileCards {
+    grid-template-columns:repeat(2,1fr)!important;
+  }
+  .about-grid {
+    gap:35px;
+  }
+}
+@media(max-width:650px) {
+  .nav-links {
+    display:none;
+    position:absolute;
+    top:68px;
+    left:0;
+    width:100%;
+    padding:25px 5%;
+    background:#fafaf6;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:18px;
+    border-bottom:1px solid #e7e9e1;
+  }
+  .nav-links.open {
+    display:flex;
+  }
+  .menu-toggle {
+    display:inline-block;
+  }
+  .hero {
+    padding:125px 0 65px;
+  }
+  .hero-grid,.about-grid {
+    grid-template-columns:1fr;
+  }
+  .hero-visual {
+    min-height:340px;
+  }
+  .visual-content {
+    width:230px;
+    height:280px;
+  }
+  .visual-symbol {
+    font-size:90px;
+  }
+  .research-grid {
+    grid-template-columns:1fr;
+  }
+  .footer-grid {
+    flex-direction:column;
+  }
+  .quote-text {
+    font-size:22px;
+  }
+}
+
+</style>
 </head>
 <body>
-    <h1>欢迎来到我的第一个网站！</h1>
-    <p>这是我亲手制作的第一个网页。</p>
-    <button onclick="alert('恭喜你，成功了！')">点击我</button>
+
+<header class="navbar">
+<div class="container nav-inner">
+  <a href="#home" class="logo">Yuan TIAN.</a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#home" data-i18n="home">Accueil</a>
+    <a href="#about" data-i18n="about">À propos</a>
+    <a href="#research" data-i18n="research">Recherche</a>
+    <a href="academic.html" data-i18n="academic">Académie</a>
+    <a href="contact.html" data-i18n="contact">Contact</a>
+  </nav>
+  <div>
+    <button class="language" id="languageBtn">FR / 中文 / EN</button>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </div>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+  <div>
+    <div class="eyebrow">UNIVERS ACADÉMIQUE</div>
+    <h1>
+      <span data-i18n="line1">Penser le</span><br>
+      <span data-i18n="line2">langage,</span><br>
+      <span data-i18n="line3">explorer le monde.</span>
+    </h1>
+    <p class="hero-description" data-i18n="description">
+      Bienvenue sur mon espace académique personnel.
+      Je suis Yuan TIAN, doctorant en sciences du langage.
+    </p>
+    <a href="#about" class="btn btn-primary" data-i18n="discover">Découvrir mon parcours</a>
+    <a href="academic.html" class="btn btn-outline" data-i18n="more">Espace académique ↗</a>
+  </div>
+  <div class="hero-visual reveal">
+    <div class="visual-content">
+      <div class="visual-symbol">Y.</div>
+      <div class="visual-caption">LANGUAGE · RESEARCH · KNOWLEDGE</div>
+    </div>
+    <div class="floating-note">Penser autrement.</div>
+  </div>
+</div>
+</section>
+
+<section style="background:white">
+<div class="container">
+  <div class="section-label">PROFIL</div>
+  <h2 class="section-title" data-i18n="profile">Quelques repères</h2>
+  <div id="profileCards" style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:35px">
+    <div class="profile-card"><strong>Yuan TIAN</strong><p data-i18n="identity">Identité académique</p></div>
+    <div class="profile-card"><strong>PhD</strong><p data-i18n="doctoral">Parcours doctoral</p></div>
+    <div class="profile-card"><strong>03</strong><p data-i18n="languages">Français · 中文 · English</p></div>
+    <div class="profile-card"><strong>SDL</strong><p data-i18n="discipline">Sciences du langage</p></div>
+  </div>
+</div>
+</section>
+    
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-decoration reveal">Y · T</div>
+    <div>
+      <div class="reveal">   <div class="section-label" data-i18n="aboutLabel">À PROPOS</div>
+      <h2 class="section-title" data-i18n="aboutTitle">
+        Un parcours entre les langues et les savoirs.
+      </h2>
+      <p class="about-text" data-i18n="aboutText">
+        Je suis Yuan TIAN, doctorant en sciences du langage.
+        Ce site est un espace personnel dédié à mon parcours
+        académique et à mes recherches.
+      </p>
+      <p class="about-text" data-i18n="aboutText2">
+        À travers le français, le chinois et l'anglais,
+        je souhaite favoriser le dialogue et les échanges académiques.
+      </p>
+      <div class="about-signature">Yuan TIAN</div>
+    </div>
+  </div>
+</section>
+
+<section class="research" id="research">
+  <div class="container">
+    <div class="section-label" data-i18n="researchLabel">RECHERCHE</div>
+    <h2 class="section-title" data-i18n="researchTitle">
+      Mon univers académique
+    </h2>
+    <p class="section-subtitle" data-i18n="researchSubtitle">
+      Un espace pour présenter mes recherches.
+    </p>
+
+    <div class="research-grid">
+      <article class="research-card reveal">
+        <div class="research-icon">✦</div>
+        <h3 data-i18n="card1Title">Recherche</h3>
+        <p data-i18n="card1Text">Mes axes de recherche et travaux scientifiques.</p>
+      </article>
+      <article class="research-card reveal">
+        <div class="research-icon">⌘</div>
+        <h3 data-i18n="card2Title">Publications</h3>
+        <p data-i18n="card2Text">Mes articles et communications académiques.</p>
+      </article>
+      <article class="research-card reveal">
+        <div class="research-icon">◎</div>
+        <h3 data-i18n="card3Title">Ressources</h3>
+        <p data-i18n="card3Text">Notes de lecture et ressources scientifiques.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="quote-box reveal">
+      <div class="quote-mark">“</div>
+      <p class="quote-text" data-i18n="quote">
+        Les langues ouvrent des fenêtres sur le monde
+        et de nouvelles façons de penser.
+      </p>
+      <div class="section-label">LANGUAGE · KNOWLEDGE · CULTURE</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container reveal">
+    <div class="section-label" data-i18n="contactLabel">
+      ÉCHANGE & COLLABORATION
+    </div>
+    <h2 class="section-title" data-i18n="contactTitle">
+      Entrons en contact.
+    </h2>
+    <p class="contact-description" data-i18n="contactText">
+      Pour toute question académique ou proposition de collaboration,
+      je serai heureux de vous lire.
+    </p>
+    <a href="contact.html" class="btn btn-primary" data-i18n="contactBtn">
+      Me contacter ↗
+    </a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-name">Yuan TIAN.</div>
+        <p class="footer-description">Site académique personnel · Sciences du langage</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home" data-i18n="home">Accueil</a>
+        <a href="#about" data-i18n="about">À propos</a>
+        <a href="academic.html" data-i18n="academic">Académie</a>
+        <a href="contact.html" data-i18n="contact">Contact</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © <span id="year"></span> Yuan TIAN. Tous droits réservés.
+    </div>
+  </div>
+</footer>
+
+<script>
+const translations = {
+fr:{
+home:"Accueil",about:"À propos",research:"Recherche",
+academic:"Académie",contact:"Contact",
+line1:"Penser le",line2:"langage,",line3:"explorer le monde.",
+description:"Bienvenue sur mon espace académique personnel. Je suis Yuan TIAN, doctorant en sciences du langage.",
+discover:"Découvrir mon parcours",more:"Espace académique ↗",
+profile:"Quelques repères",identity:"Identité académique",
+doctoral:"Parcours doctoral",languages:"Français · 中文 · English",
+discipline:"Sciences du langage",
+aboutLabel:"À PROPOS",
+aboutTitle:"Un parcours entre les langues et les savoirs.",
+aboutText:"Je suis Yuan TIAN, doctorant en sciences du langage. Ce site est un espace personnel dédié à mon parcours académique et à mes recherches.",
+aboutText2:"À travers le français, le chinois et l'anglais, je souhaite favoriser le dialogue et les échanges académiques.",
+researchLabel:"RECHERCHE",researchTitle:"Mon univers académique",
+researchSubtitle:"Un espace pour présenter mes recherches.",
+card1Title:"Recherche",card1Text:"Mes axes de recherche et travaux scientifiques.",
+card2Title:"Publications",card2Text:"Mes articles et communications académiques.",
+card3Title:"Ressources",card3Text:"Notes de lecture et ressources scientifiques.",
+quote:"Les langues ouvrent des fenêtres sur le monde et de nouvelles façons de penser.",
+contactLabel:"ÉCHANGE & COLLABORATION",
+contactTitle:"Entrons en contact.",
+contactText:"Pour toute question académique ou proposition de collaboration, je serai heureux de vous lire.",
+contactBtn:"Me contacter ↗"
+},
+zh:{
+home:"首页",about:"关于我",research:"研究方向",
+academic:"学术空间",contact:"联系我",
+line1:"探索",line2:"语言，",line3:"理解世界。",
+description:"欢迎来到我的个人学术网站。我是 Yuan TIAN，一名语言科学博士生。这里记录我的学术经历与研究活动。",
+discover:"了解我的学术经历",more:"学术空间 ↗",
+profile:"个人简介",identity:"个人学术身份",
+doctoral:"博士研究生",languages:"法语 · 中文 · 英语",
+discipline:"语言科学",
+aboutLabel:"关于我",
+aboutTitle:"在语言与知识之间探索。",
+aboutText:"我是 Yuan TIAN，一名语言科学博士生。这个网站是我的个人学术空间，用于展示学术经历与研究。",
+aboutText2:"通过法语、中文和英语，我希望促进交流、思考与学术对话。",
+researchLabel:"学术研究",researchTitle:"我的学术空间",
+researchSubtitle:"介绍我的研究与学术活动。",
+card1Title:"研究方向",card1Text:"介绍研究主题与科学研究工作。",
+card2Title:"学术成果",card2Text:"展示论文与学术会议成果。",
+card3Title:"学习资源",card3Text:"阅读笔记与学术资料。",
+quote:"语言为我们打开认识世界的窗口，也带来新的思考方式。",
+contactLabel:"交流与合作",
+contactTitle:"欢迎与我联系。",
+contactText:"无论是学术问题还是合作邀请，我都期待与你交流。",
+contactBtn:"联系我 ↗"
+},
+en:{
+home:"Home",about:"About",research:"Research",
+academic:"Academics",contact:"Contact",
+line1:"Thinking about",line2:"language,",line3:"exploring the world.",
+description:"Welcome to my personal academic website. I am Yuan TIAN, a doctoral researcher in language sciences.",
+discover:"Discover my journey",more:"Academic space ↗",
+profile:"A few key facts",identity:"Academic identity",
+doctoral:"Doctoral studies",languages:"French · Chinese · English",
+discipline:"Language Sciences",
+aboutLabel:"ABOUT",
+aboutTitle:"A journey across languages and knowledge.",
+aboutText:"I am Yuan TIAN, a doctoral researcher in language sciences. This website is dedicated to my academic journey and research.",
+aboutText2:"Through French, Chinese and English, I hope to encourage dialogue and academic exchange.",
+researchLabel:"RESEARCH",researchTitle:"My academic world",
+researchSubtitle:"A space to present my research.",
+card1Title:"Research",card1Text:"My research interests and scientific work.",
+card2Title:"Publications",card2Text:"My articles and academic presentations.",
+card3Title:"Resources",card3Text:"Reading notes and academic resources.",
+quote:"Languages open windows onto the world and new ways of thinking.",
+contactLabel:"EXCHANGE & COLLABORATION",
+contactTitle:"Let's get in touch.",
+contactText:"For academic questions or collaboration proposals, I would be delighted to hear from you.",
+contactBtn:"Contact me ↗"
+}
+};
+
+let lang="fr";
+const order=["fr","zh","en"];
+
+function setLanguage(next){
+  lang=next;
+  document.documentElement.lang=next==="zh"?"zh-CN":next;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key=el.dataset.i18n;
+    if(translations[next][key]) el.textContent=translations[next][key];
+  });
+  document.getElementById("languageBtn").textContent=
+    next==="fr"?"FR / 中文 / EN":
+    next==="zh"?"中文 / FR / EN":"EN / FR / 中文";
+}
+
+document.getElementById("languageBtn").addEventListener("click",()=>{
+  setLanguage(order[(order.indexOf(lang)+1)%3]);
+});
+
+const toggle=document.getElementById("menuToggle");
+const nav=document.getElementById("navLinks");
+
+toggle.addEventListener("click",()=>{
+  nav.classList.toggle("open");
+});
+
+nav.querySelectorAll("a").forEach(a=>{
+  a.addEventListener("click",()=>nav.classList.remove("open"));
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+if("IntersectionObserver" in window){
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:.12});
+
+  document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+}
+</script>
 </body>
 </html>
