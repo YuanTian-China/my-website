@@ -401,12 +401,26 @@ footer {
     <a href="contact.html" data-i18n="contact">Contact</a>
   </nav>
   <div>
+    <header class="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">Yuan TIAN.</a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" data-i18n="home">Accueil</a>
+      <a href="#about" data-i18n="about">À propos</a>
+      <a href="#research" data-i18n="research">Recherche</a>
+      <a href="academic.html" data-i18n="academic">Académie</a>
+      <a href="cv.html" data-i18n="cv">CV</a>
+      <a href="contact.html" data-i18n="contact">Contact</a>
+    </nav>
+
     <div class="language-switcher">
-  <button class="language" data-home-lang="fr">FR</button>
-  <button class="language" data-home-lang="zh">中文</button>
-  <button class="language" data-home-lang="en">EN</button>
-</div>
-</div>
+      <button class="language" data-home-lang="fr">FR</button>
+      <button class="language" data-home-lang="zh">中文</button>
+      <button class="language" data-home-lang="en">EN</button>
+    </div>
+
+  </div>
 </header>
 
 <main>
@@ -473,22 +487,33 @@ footer {
 <section id="about">
   <div class="container about-grid">
     <div class="about-decoration reveal">Y · T</div>
-    <div>
-      <div class="reveal">   <div class="section-label" data-i18n="aboutLabel">À PROPOS</div>
+  <section id="about">
+  <div class="container about-grid">
+
+    <div class="about-decoration reveal">Y · T</div>
+
+    <div class="reveal">
+      <div class="section-label" data-i18n="aboutLabel">
+        À PROPOS
+      </div>
+
       <h2 class="section-title" data-i18n="aboutTitle">
         Un parcours entre les langues et les savoirs.
       </h2>
+
       <p class="about-text" data-i18n="aboutText">
         Je suis Yuan TIAN, Doctorante en Sciences du langage.
-        Ce site est un espace personnel dédié à mon parcours
-        académique et à mes recherches.
+        Ce site est un espace personnel dédié à mon parcours académique et à mes recherches.
       </p>
+
       <p class="about-text" data-i18n="aboutText2">
         À travers le français, le chinois et l'anglais,
         je souhaite favoriser le dialogue et les échanges académiques.
       </p>
+
       <div class="about-signature">Yuan TIAN</div>
     </div>
+
   </div>
 </section>
 
@@ -730,16 +755,22 @@ document.querySelectorAll("[data-home-lang]").forEach(button => {
 // Restore saved language
 setLanguage(lang);
 
-const toggle=document.getElementById("menuToggle");
-const nav=document.getElementById("navLinks");
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("navLinks");
 
-toggle.addEventListener("click",()=>{
-  nav.classList.toggle("open");
-});
+if (toggle && nav) {
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+}
 
-nav.querySelectorAll("a").forEach(a=>{
-  a.addEventListener("click",()=>nav.classList.remove("open"));
-});
+if (nav) {
+  nav.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      nav.classList.remove("open");
+    });
+  });
+}
 
 document.getElementById("year").textContent=new Date().getFullYear();
 
