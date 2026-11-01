@@ -1,0 +1,182 @@
+
+window.translations = {
+  nav_home: {
+    FR: "Accueil", CN: "首页", EN: "Home"
+  },
+  nav_academic: {
+    FR: "Recherche", CN: "学术研究", EN: "Research"
+  },
+  nav_cv: {
+    FR: "CV", CN: "个人简历", EN: "CV"
+  },
+  nav_contact: {
+    FR: "Contact", CN: "联系我", EN: "Contact"
+  },
+  academic_title: {
+    FR: "Recherche académique",
+    CN: "学术研究",
+    EN: "Academic Research"
+  },
+  academic_subtitle: {
+    FR: "Explorer les idées, développer les connaissances et relier les disciplines.",
+    CN: "探索思想、拓展知识，并建立跨学科的联系。",
+    EN: "Exploring ideas, building knowledge and connecting disciplines."
+  },
+  research_overview: {
+    FR: "PRÉSENTATION DE LA RECHERCHE",
+    CN: "研究概览",
+    EN: "RESEARCH OVERVIEW"
+  },
+  research_heading: {
+    FR: "Mes domaines de recherche",
+    CN: "我的研究领域",
+    EN: "Research Interests"
+  },
+  research_description: {
+    FR: "Présentation de mes intérêts scientifiques et de mes perspectives interdisciplinaires. Les contenus actuels sont des exemples à personnaliser.",
+    CN: "这里介绍我的学术兴趣、研究问题和跨学科视角。目前内容为示例，之后可以替换。",
+    EN: "An introduction to my academic interests and interdisciplinary perspectives. Current content is illustrative."
+  },
+  interest_1: {
+    FR: "Domaine de recherche 1",
+    CN: "研究领域一",
+    EN: "Research Area One"
+  },
+  interest_1_desc: {
+    FR: "Un exemple de domaine de recherche et de ses questions centrales.",
+    CN: "研究方向示例及其核心问题。",
+    EN: "An example research field and its central questions."
+  },
+  interest_2: {
+    FR: "Domaine de recherche 2",
+    CN: "研究领域二",
+    EN: "Research Area Two"
+  },
+  interest_2_desc: {
+    FR: "Un exemple de recherche internationale et comparative.",
+    CN: "国际研究与比较研究示例。",
+    EN: "An example of international and comparative research."
+  },
+  interest_3: {
+    FR: "Domaine de recherche 3",
+    CN: "研究领域三",
+    EN: "Research Area Three"
+  },
+  interest_3_desc: {
+    FR: "Un exemple d'étude interdisciplinaire.",
+    CN: "跨学科研究示例。",
+    EN: "An example of interdisciplinary investigation."
+  },
+  projects_title: {
+    FR: "Projets de recherche",
+    CN: "研究项目",
+    EN: "Research Projects"
+  },
+  projects_subtitle: {
+    FR: "Une sélection de thèmes et de projets académiques.",
+    CN: "精选研究主题与学术项目。",
+    EN: "A selection of research themes and academic projects."
+  },
+  filter_all: {
+    FR: "Tout", CN: "全部", EN: "All"
+  },
+  filter_project: {
+    FR: "Projets", CN: "项目", EN: "Projects"
+  },
+  filter_publication: {
+    FR: "Publications", CN: "论文", EN: "Publications"
+  },
+  filter_conference: {
+    FR: "Conférences", CN: "会议", EN: "Conferences"
+  },
+  project_1: {
+    FR: "Projet de recherche interdisciplinaire",
+    CN: "跨学科研究项目",
+    EN: "Interdisciplinary Research Project"
+  },
+  project_1_desc: {
+    FR: "Exemple de projet présentant ses objectifs, sa méthodologie et ses résultats.",
+    CN: "一个展示研究目标、方法与成果的项目示例。",
+    EN: "An illustrative research project including objectives, methodology and findings."
+  },
+  project_2: {
+    FR: "Revue de littérature académique",
+    CN: "学术文献综述",
+    EN: "Academic Literature Review"
+  },
+  project_2_desc: {
+    FR: "Exemple de revue de littérature explorant des cadres théoriques.",
+    CN: "探索理论框架与研究视角的文献综述示例。",
+    EN: "An example literature review exploring theoretical frameworks."
+  },
+  project_3: {
+    FR: "Conférence académique internationale",
+    CN: "国际学术会议",
+    EN: "International Academic Conference"
+  },
+  project_3_desc: {
+    FR: "Exemple de participation à un événement académique.",
+    CN: "学术会议参与和知识交流的示例。",
+    EN: "An illustrative example of conference participation."
+  },
+  project_4: {
+    FR: "Méthodes de recherche numérique",
+    CN: "数字研究方法",
+    EN: "Digital Research Methods"
+  },
+  project_4_desc: {
+    FR: "Exemple d'utilisation des outils numériques dans la recherche.",
+    CN: "当代研究中数字工具与分析方法的示例。",
+    EN: "An example of digital tools and analytical approaches."
+  },
+  method_title: {
+    FR: "Méthodologie de recherche",
+    CN: "研究方法",
+    EN: "Research Methodology"
+  },
+  method_desc: {
+    FR: "Une méthodologie rigoureuse, transparente et pertinente est essentielle à la recherche.",
+    CN: "严谨、透明且有意义的研究方法是学术研究的基础。",
+    EN: "Rigorous and transparent methodology is essential to meaningful research."
+  },
+  method_1: {
+    FR: "Analyse bibliographique",
+    CN: "文献分析",
+    EN: "Literature Analysis"
+  },
+  method_1_desc: {
+    FR: "Examiner la littérature scientifique et identifier les lacunes.",
+    CN: "梳理学术文献，识别研究空白。",
+    EN: "Reviewing academic literature and identifying research gaps."
+  },
+  method_2: {
+    FR: "Perspectives comparatives",
+    CN: "比较研究视角",
+    EN: "Comparative Perspectives"
+  },
+  method_2_desc: {
+    FR: "Explorer différentes perspectives et approches interdisciplinaires.",
+    CN: "探索不同观点和跨学科研究方法。",
+    EN: "Exploring different perspectives and interdisciplinary approaches."
+  },
+  academic_quote: {
+    FR: "La recherche ne consiste pas seulement à trouver des réponses, mais aussi à apprendre à poser de meilleures questions.",
+    CN: "研究不仅是寻找答案，更是学习如何提出更好的问题。",
+    EN: "Research is not only about finding answers, but also about learning how to ask better questions."
+  },
+  collaboration_title: {
+    FR: "Collaboration académique",
+    CN: "学术合作",
+    EN: "Academic Collaboration"
+  },
+  collaboration_desc: {
+    FR: "Ouverte aux échanges scientifiques et aux collaborations interdisciplinaires.",
+    CN: "欢迎学术交流、研究讨论与跨学科合作。",
+    EN: "Open to academic exchange and interdisciplinary collaboration."
+  },
+  contact_button: {
+    FR: "Me contacter →",
+    CN: "联系我 →",
+    EN: "Get in Touch →"
+  }
+};
