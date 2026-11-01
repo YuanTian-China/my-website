@@ -65,7 +65,7 @@
       return;
     }
 
-    const dictionary = translations[lang];
+    const translations = getTranslations();
 
     // Update HTML language attribute
     document.documentElement.lang = LANG_CODES[lang];
@@ -76,7 +76,7 @@
       const key = element.getAttribute("data-i18n");
 
       if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
-        element.textContent = dictionary[key];
+        element.textContent = translations[key]?.[lang];
       }
 
     });
@@ -87,7 +87,7 @@
       const key = element.getAttribute("data-i18n-placeholder");
 
       if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
-        element.placeholder = dictionary[key];
+        element.placeholder = translations[key]?.[lang];
       }
 
     });
@@ -98,8 +98,8 @@
     if (titleElement) {
       const key = titleElement.getAttribute("data-i18n-title");
 
-      if (dictionary[key]) {
-        document.title = dictionary[key];
+      if (translations[key]?.[lang]) {
+        document.title = translations[key]?.[lang];
       }
     }
 
