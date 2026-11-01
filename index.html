@@ -52,6 +52,11 @@ a {text-decoration:none;color:inherit}
   padding:8px 12px;background:transparent;
   color:var(--green);cursor:pointer;
 }
+  .language.active {
+  background:var(--green);
+  color:white;
+  border-color:var(--green);
+}
 .menu-toggle {display:none;border:0;background:none;font-size:24px;color:var(--green)}
 
 .hero {padding:160px 0 100px}
@@ -374,17 +379,7 @@ footer {
     font-size:22px;
   }
 }
-.language-switcher {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
 
-.language.active {
-  background: var(--green);
-  color: white;
-  border-color: var(--green);
-}
 </style>
 </head>
 <body>
@@ -400,27 +395,15 @@ footer {
     <a href="cv.html" data-i18n="cv">CV</a>
     <a href="contact.html" data-i18n="contact">Contact</a>
   </nav>
-  <div>
-    <header class="navbar">
-  <div class="container nav-inner">
-    <a href="#home" class="logo">Yuan TIAN.</a>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#home" data-i18n="home">Accueil</a>
-      <a href="#about" data-i18n="about">À propos</a>
-      <a href="#research" data-i18n="research">Recherche</a>
-      <a href="academic.html" data-i18n="academic">Académie</a>
-      <a href="cv.html" data-i18n="cv">CV</a>
-      <a href="contact.html" data-i18n="contact">Contact</a>
-    </nav>
-
+    <div style="display:flex;align-items:center;gap:10px">
     <div class="language-switcher">
       <button class="language" data-home-lang="fr">FR</button>
       <button class="language" data-home-lang="zh">中文</button>
       <button class="language" data-home-lang="en">EN</button>
     </div>
-
+    <button class="menu-toggle" id="menuToggle">☰</button>
   </div>
+</div>
 </header>
 
 <main>
@@ -487,33 +470,22 @@ footer {
 <section id="about">
   <div class="container about-grid">
     <div class="about-decoration reveal">Y · T</div>
-  <section id="about">
-  <div class="container about-grid">
-
-    <div class="about-decoration reveal">Y · T</div>
-
-    <div class="reveal">
-      <div class="section-label" data-i18n="aboutLabel">
-        À PROPOS
-      </div>
-
+    <div>
+      <div class="reveal">   <div class="section-label" data-i18n="aboutLabel">À PROPOS</div>
       <h2 class="section-title" data-i18n="aboutTitle">
         Un parcours entre les langues et les savoirs.
       </h2>
-
       <p class="about-text" data-i18n="aboutText">
         Je suis Yuan TIAN, Doctorante en Sciences du langage.
-        Ce site est un espace personnel dédié à mon parcours académique et à mes recherches.
+        Ce site est un espace personnel dédié à mon parcours
+        académique et à mes recherches.
       </p>
-
       <p class="about-text" data-i18n="aboutText2">
         À travers le français, le chinois et l'anglais,
         je souhaite favoriser le dialogue et les échanges académiques.
       </p>
-
       <div class="about-signature">Yuan TIAN</div>
     </div>
-
   </div>
 </section>
 
@@ -696,6 +668,9 @@ contactBtn:"Contact me ↗"
 };
 
 
+
+const order = ["fr", "zh", "en"];
+
 const STORAGE_KEY = "yuan_tian_language";
 
 const languageMap = {
@@ -704,9 +679,8 @@ const languageMap = {
   en: "EN"
 };
 
-// Read saved language
+// Read saved language from the shared storage
 const savedLanguage = localStorage.getItem(STORAGE_KEY);
-
 const oldLanguage = localStorage.getItem("preferredLanguage");
 
 let lang = savedLanguage
@@ -722,8 +696,9 @@ function setLanguage(next) {
 
   lang = next;
 
-  // Save using the same format as other pages
+  // Save language for all pages
   localStorage.setItem(STORAGE_KEY, languageMap[next]);
+  localStorage.setItem("preferredLanguage", next);
 
   document.documentElement.lang =
     next === "zh" ? "zh-CN" : next;
@@ -736,7 +711,7 @@ function setLanguage(next) {
     }
   });
 
-  // Highlight selected language
+  // Highlight selected language button
   document.querySelectorAll("[data-home-lang]").forEach(button => {
     const active = button.dataset.homeLang === next;
 
@@ -745,32 +720,26 @@ function setLanguage(next) {
   });
 }
 
-// Bind three independent buttons
+// Three independent language buttons
 document.querySelectorAll("[data-home-lang]").forEach(button => {
   button.addEventListener("click", () => {
     setLanguage(button.dataset.homeLang);
   });
 });
 
-// Restore saved language
+// Apply saved language on page load
 setLanguage(lang);
 
-const toggle = document.getElementById("menuToggle");
-const nav = document.getElementById("navLinks");
+const toggle=document.getElementById("menuToggle");
+const nav=document.getElementById("navLinks");
 
-if (toggle && nav) {
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("open");
-  });
-}
+toggle.addEventListener("click",()=>{
+  nav.classList.toggle("open");
+});
 
-if (nav) {
-  nav.querySelectorAll("a").forEach(a => {
-    a.addEventListener("click", () => {
-      nav.classList.remove("open");
-    });
-  });
-}
+nav.querySelectorAll("a").forEach(a=>{
+  a.addEventListener("click",()=>nav.classList.remove("open"));
+});
 
 document.getElementById("year").textContent=new Date().getFullYear();
 
