@@ -523,4 +523,20 @@ window.translations = {
     CN: "欢迎学术交流、研究讨论及学术合作。",
     EN: "Open to academic exchange, research discussions and academic collaboration."
   }
-};
+contact_affiliation: {
+  FR: "🎓 Affiliation académique",
+  CN: "🎓 学术所属机构",
+  EN: "🎓 Academic Affiliation"
+},
+
+contact_institution: {
+  FR: "Université Savoie Mont Blanc",
+  CN: "萨瓦勃朗峰大学",
+  EN: "Université Savoie Mont Blanc"
+},
+
+contact_country: {
+  FR: "France",
+  CN: "法国",
+  EN: "France"
+}};
