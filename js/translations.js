@@ -220,7 +220,7 @@ window.translations = {
     FR: "Localisation académique",
     CN: "学术所在地",
     EN: "Academic Location"
-  }
+  },
 
   // CV PAGE
   cv_label: {
@@ -289,9 +289,10 @@ window.translations = {
     EN: "DOCTORAL RESEARCH"
   },
   cv_research_title: {
-    FR: "Sujet de recherche",
-    CN: "博士论文研究主题",
-    EN: "Research Topic"
+      cv_thesis_title: {
+    FR: "Méthode d’intégration des TICE dans l’enseignement/apprentissage du FLE au lycée / collège en Chine pour que les apprenants améliorent leur compétence en production du français oral.",
+    CN: "中国中学法语教学中信息与通信技术（TICE）的整合方法：促进学习者法语口语表达能力的提升。",
+    EN: "Methods for Integrating ICT into FLE Teaching and Learning in Chinese Middle and High Schools to Improve Learners’ French Oral Production Skills."
   },
   cv_thesis_heading: {
     FR: "Thèse de doctorat",
@@ -304,49 +305,49 @@ window.translations = {
     EN: "Doctoral thesis under joint supervision in Language Sciences."
   },
   cv_thesis_note: {
-    FR: "Titre original de la recherche doctorale communiqué par la chercheuse.",
-    CN: "以上为本人提供的博士论文原始题目。",
-    EN: "Original doctoral research title provided by the researcher."
-  },
-  cv_context_label: {
-    FR: "ENVIRONNEMENT DE RECHERCHE",
-    CN: "研究环境",
-    EN: "RESEARCH CONTEXT"
+  FR: "Cette recherche porte sur l’intégration des TICE dans l’enseignement du FLE en Chine, avec pour objectif de développer les compétences en production orale des apprenants.",
+  CN: "本研究探讨信息与通信技术（TICE）在中国对外法语教学中的整合应用，旨在提升学习者的法语口语表达能力。",
+  EN: "This research explores the integration of ICT into French as a Foreign Language (FLE) teaching in China, with the aim of improving learners’ oral production skills."
+},
+   cv_context_label: {
+    FR: "ENVIRONNEMENT ACADÉMIQUE",
+    CN: "学术背景",
+    EN: "ACADEMIC BACKGROUND"
   },
   cv_context_title: {
-    FR: "Environnement académique",
-    CN: "学术研究机构",
-    EN: "Research Environment"
+    FR: "Mon environnement universitaire",
+    CN: "我的大学与研究环境",
+    EN: "My Academic Environment"
   },
   cv_school: {
-    FR: "Université",
-    CN: "大学",
-    EN: "University"
+    FR: "Université Savoie Mont Blanc",
+    CN: "萨瓦勃朗峰大学",
+    EN: "Université Savoie Mont Blanc"
   },
   cv_doctoral_school: {
-    FR: "École doctorale",
-    CN: "博士研究生院",
-    EN: "Doctoral School"
+    FR: "École doctorale CST",
+    CN: "博士研究生院 CST",
+    EN: "Doctoral School CST"
   },
   cv_lab: {
-    FR: "Laboratoire de recherche",
-    CN: "研究实验室",
-    EN: "Research Laboratory"
+    FR: "LLSETI · Axe 2",
+    CN: "LLSETI 实验室 · 第二研究方向",
+    EN: "LLSETI · Research Area 2"
   },
   cv_field: {
-    FR: "Discipline académique",
-    CN: "学科领域",
-    EN: "Academic Discipline"
+    FR: "Sciences du langage",
+    CN: "语言科学",
+    EN: "Language Sciences"
   },
   cv_languages_label: {
     FR: "LANGUES",
-    CN: "语言能力",
+    CN: "语言",
     EN: "LANGUAGES"
   },
   cv_languages_title: {
-    FR: "Compétences linguistiques",
-    CN: "语言能力",
-    EN: "Language Skills"
+    FR: "Langues pratiquées",
+    CN: "语言背景",
+    EN: "Languages"
   },
   cv_languages_text: {
     FR: "Français · Chinois · Anglais",
@@ -354,9 +355,9 @@ window.translations = {
     EN: "French · Chinese · English"
   },
   cv_language_note: {
-    FR: "Les niveaux de maîtrise linguistique restent à préciser.",
-    CN: "具体语言熟练程度尚待确认。",
-    EN: "Language proficiency levels have not been specified."
+    FR: "Les niveaux de compétence linguistique seront précisés ultérieurement.",
+    CN: "语言熟练程度及具体等级暂不标注。",
+    EN: "Specific language proficiency levels are not listed at this stage."
   },
   cv_contact_label: {
     FR: "CONTACT ACADÉMIQUE",
