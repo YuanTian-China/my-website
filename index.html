@@ -374,7 +374,17 @@ footer {
     font-size:22px;
   }
 }
+.language-switcher {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
 
+.language.active {
+  background: var(--green);
+  color: white;
+  border-color: var(--green);
+}
 </style>
 </head>
 <body>
@@ -661,18 +671,34 @@ contactBtn:"Contact me ↗"
 };
 
 
-const order = ["fr", "zh", "en"];
+const STORAGE_KEY = "yuan_tian_language";
 
-// Read the previously selected language
-let lang = localStorage.getItem("preferredLanguage") || "fr";
+const languageMap = {
+  fr: "FR",
+  zh: "CN",
+  en: "EN"
+};
+
+// Read saved language
+const savedLanguage = localStorage.getItem(STORAGE_KEY);
+
+const oldLanguage = localStorage.getItem("preferredLanguage");
+
+let lang = savedLanguage
+  ? ({
+      FR: "fr",
+      CN: "zh",
+      EN: "en"
+    }[savedLanguage] || "fr")
+  : (oldLanguage || "fr");
 
 function setLanguage(next) {
   if (!translations[next]) return;
 
   lang = next;
 
-  // Save language for all pages
-  localStorage.setItem("preferredLanguage", next);
+  // Save using the same format as other pages
+  localStorage.setItem(STORAGE_KEY, languageMap[next]);
 
   document.documentElement.lang =
     next === "zh" ? "zh-CN" : next;
@@ -680,26 +706,28 @@ function setLanguage(next) {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.dataset.i18n;
 
-    if (translations[next][key]) {
+    if (translations[next][key] !== undefined) {
       el.textContent = translations[next][key];
     }
   });
 
-  document.getElementById("languageBtn").textContent =
-    next === "fr" ? "FR / 中文 / EN" :
-    next === "zh" ? "中文 / FR / EN" :
-    "EN / FR / 中文";
+  // Highlight selected language
+  document.querySelectorAll("[data-home-lang]").forEach(button => {
+    const active = button.dataset.homeLang === next;
+
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
 }
 
-// Language switching
-document.getElementById("languageBtn").addEventListener("click", () => {
-  const currentIndex = order.indexOf(lang);
-  const nextIndex = (currentIndex + 1) % order.length;
-
-  setLanguage(order[nextIndex]);
+// Bind three independent buttons
+document.querySelectorAll("[data-home-lang]").forEach(button => {
+  button.addEventListener("click", () => {
+    setLanguage(button.dataset.homeLang);
+  });
 });
 
-// Apply saved language on page load
+// Restore saved language
 setLanguage(lang);
 
 const toggle=document.getElementById("menuToggle");
