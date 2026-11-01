@@ -550,4 +550,83 @@ window.translations = {
     EN: "All rights reserved."
   }
 
+  // =========================
+  // ACADEMIC RESOURCES
+  // =========================
+
+  resources_label: {
+    FR: "SAVOIR ET RESSOURCES",
+    CN: "知识与学术资源",
+    EN: "KNOWLEDGE & RESOURCES"
+  },
+  resources_title: {
+    FR: "Ressources académiques",
+    CN: "学术资源",
+    EN: "Academic Resources"
+  },
+  resources_subtitle: {
+    FR: "Notes de lecture, outils de recherche et ressources académiques.",
+    CN: "阅读笔记、研究工具与学术资源。",
+    EN: "Reading notes, research tools and academic resources."
+  },
+  resource_1: {
+    FR: "Notes de lecture",
+    CN: "阅读笔记",
+    EN: "Reading Notes"
+  },
+  resource_1_desc: {
+    FR: "Notes de lecture, comptes rendus de livres et réflexions sur la littérature académique.",
+    CN: "精选阅读笔记、书评及学术文献思考。",
+    EN: "Selected reading notes, book reviews and reflections on academic literature."
+  },
+  resource_2: {
+    FR: "Outils de recherche",
+    CN: "研究工具",
+    EN: "Research Tools"
+  },
+  resource_2_desc: {
+    FR: "Bases de données, outils numériques et ressources de recherche académique.",
+    CN: "实用学术数据库、数字工具与研究资源。",
+    EN: "Useful research databases, digital tools and academic search resources."
+  },
+  resource_3: {
+    FR: "Ressources académiques",
+    CN: "学术资源",
+    EN: "Academic Resources"
+  },
+  resource_3_desc: {
+    FR: "Sites web, revues scientifiques et plateformes académiques internationales.",
+    CN: "精选网站、学术期刊与国际学术平台。",
+    EN: "Selected websites, journals and international academic platforms."
+  },
+  demo_resource: {
+    FR: "RESSOURCE DE DÉMONSTRATION",
+    CN: "示例资源",
+    EN: "DEMO RESOURCE"
+  },
+  resources_note: {
+    FR: "* Toutes les ressources sont des exemples illustratifs.",
+    CN: "* 所有资源均为示例内容。",
+    EN: "* All resources are illustrative examples."
+  },
+  footer_profile: {
+    FR: "Profil académique",
+    CN: "学术简介",
+    EN: "Academic Profile"
+  },
+  footer_research: {
+    FR: "Recherche et publications",
+    CN: "研究与论文",
+    EN: "Research & Publications"
+  },
+  footer_exchange: {
+    FR: "Échanges académiques",
+    CN: "学术交流",
+    EN: "Academic Exchange"
+  },
+  footer_collaboration: {
+    FR: "Collaboration internationale",
+    CN: "国际合作",
+    EN: "International Collaboration"
+  },
 };
