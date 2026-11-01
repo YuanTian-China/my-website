@@ -174,11 +174,11 @@ window.translations = {
     CN: "欢迎学术交流、研究讨论与跨学科合作。",
     EN: "Open to academic exchange and interdisciplinary collaboration."
   },
-  contact_button: {
+    contact_button: {
     FR: "Me contacter →",
     CN: "联系我 →",
     EN: "Get in Touch →"
-  }
+  },
 
   // CONTACT PAGE
   contact_title: {
@@ -220,5 +220,167 @@ window.translations = {
     FR: "Localisation académique",
     CN: "学术所在地",
     EN: "Academic Location"
+  }
+
+  // CV PAGE
+  cv_label: {
+    FR: "CURRICULUM VITAE",
+    CN: "个人学术简历",
+    EN: "CURRICULUM VITAE"
+  },
+  cv_title: {
+    FR: "Profil académique",
+    CN: "学术个人简介",
+    EN: "Academic Profile"
+  },
+  cv_subtitle: {
+    FR: "Parcours universitaire, recherche doctorale et profil académique.",
+    CN: "教育经历、博士研究与学术背景。",
+    EN: "Academic background, doctoral research and professional profile."
+  },
+  cv_profile_label: {
+    FR: "PROFIL ACADÉMIQUE",
+    CN: "学术简介",
+    EN: "ACADEMIC PROFILE"
+  },
+  cv_position: {
+    FR: "Doctorante en Sciences du langage",
+    CN: "语言科学博士研究生",
+    EN: "Doctoral Researcher in Language Sciences"
+  },
+  cv_profile_text: {
+    FR: "Doctorante à l’Université Savoie Mont Blanc dans le domaine des Sciences du langage. Ce site présente mon parcours universitaire et mes recherches doctorales.",
+    CN: "目前在萨瓦勃朗峰大学攻读语言科学博士学位。本网站介绍我的教育经历及博士研究。",
+    EN: "Doctoral researcher at Université Savoie Mont Blanc in Language Sciences. This website presents my academic background and doctoral research."
+  },
+  cv_discipline: {
+    FR: "Sciences du langage",
+    CN: "语言科学",
+    EN: "Language Sciences"
+  },
+  cv_education_label: {
+    FR: "FORMATION",
+    CN: "教育经历",
+    EN: "EDUCATION"
+  },
+  cv_education_title: {
+    FR: "Parcours universitaire",
+    CN: "大学教育经历",
+    EN: "Academic Background"
+  },
+  cv_phd: {
+    FR: "Doctorat en Sciences du langage",
+    CN: "语言科学博士",
+    EN: "Doctorate in Language Sciences"
+  },
+  cv_phd_detail: {
+    FR: "Thèse de doctorat en codirection.",
+    CN: "双导师联合指导博士论文。",
+    EN: "Doctoral thesis under joint supervision."
+  },
+  cv_master_detail: {
+    FR: "Master en Français Langue Étrangère (FLE).",
+    CN: "对外法语专业硕士。",
+    EN: "Master's degree in French as a Foreign Language."
+  },
+  cv_research_label: {
+    FR: "RECHERCHE DOCTORALE",
+    CN: "博士研究",
+    EN: "DOCTORAL RESEARCH"
+  },
+  cv_research_title: {
+    FR: "Sujet de recherche",
+    CN: "博士论文研究主题",
+    EN: "Research Topic"
+  },
+  cv_thesis_heading: {
+    FR: "Thèse de doctorat",
+    CN: "博士学位论文",
+    EN: "Doctoral Thesis"
+  },
+  cv_codirection: {
+    FR: "Thèse de doctorat en codirection en Sciences du langage.",
+    CN: "语言科学博士论文，采用双导师联合指导。",
+    EN: "Doctoral thesis under joint supervision in Language Sciences."
+  },
+  cv_thesis_note: {
+    FR: "Titre original de la recherche doctorale communiqué par la chercheuse.",
+    CN: "以上为本人提供的博士论文原始题目。",
+    EN: "Original doctoral research title provided by the researcher."
+  },
+  cv_context_label: {
+    FR: "ENVIRONNEMENT DE RECHERCHE",
+    CN: "研究环境",
+    EN: "RESEARCH CONTEXT"
+  },
+  cv_context_title: {
+    FR: "Environnement académique",
+    CN: "学术研究机构",
+    EN: "Research Environment"
+  },
+  cv_school: {
+    FR: "Université",
+    CN: "大学",
+    EN: "University"
+  },
+  cv_doctoral_school: {
+    FR: "École doctorale",
+    CN: "博士研究生院",
+    EN: "Doctoral School"
+  },
+  cv_lab: {
+    FR: "Laboratoire de recherche",
+    CN: "研究实验室",
+    EN: "Research Laboratory"
+  },
+  cv_field: {
+    FR: "Discipline académique",
+    CN: "学科领域",
+    EN: "Academic Discipline"
+  },
+  cv_languages_label: {
+    FR: "LANGUES",
+    CN: "语言能力",
+    EN: "LANGUAGES"
+  },
+  cv_languages_title: {
+    FR: "Compétences linguistiques",
+    CN: "语言能力",
+    EN: "Language Skills"
+  },
+  cv_languages_text: {
+    FR: "Français · Chinois · Anglais",
+    CN: "法语 · 中文 · 英语",
+    EN: "French · Chinese · English"
+  },
+  cv_language_note: {
+    FR: "Les niveaux de maîtrise linguistique restent à préciser.",
+    CN: "具体语言熟练程度尚待确认。",
+    EN: "Language proficiency levels have not been specified."
+  },
+  cv_contact_label: {
+    FR: "CONTACT ACADÉMIQUE",
+    CN: "学术联系",
+    EN: "ACADEMIC CONTACT"
+  },
+  cv_contact_title: {
+    FR: "Échanges et collaborations académiques",
+    CN: "学术交流与合作",
+    EN: "Academic Exchange & Collaboration"
+  },
+  footer_description: {
+    FR: "Portfolio académique · Sciences du langage",
+    CN: "个人学术网站 · 语言科学",
+    EN: "Academic Portfolio · Language Sciences"
+  },
+  footer_navigation: {
+    FR: "Navigation",
+    CN: "网站导航",
+    EN: "Navigation"
+  },
+  footer_rights: {
+    FR: "Tous droits réservés.",
+    CN: "版权所有。",
+    EN: "All rights reserved."
   }
 };
